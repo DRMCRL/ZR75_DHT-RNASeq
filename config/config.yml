@@ -23,7 +23,7 @@ ref:
 # indexing_extra, whilst additional parameters for alignment are passed through
 # align_extra
 star:
-  sjdbOverhang: 100
+  sjdbOverhang: 39
   indexing_extra: ""
   align_extra: "--outSAMtype BAM SortedByCoordinate"
 
@@ -41,9 +41,9 @@ trimming:
   extra: "--gzip --trimqualities"
 
 # Settings for featureCounts. To set this to count strictly exonic reads,
-# change fracOverlap to be the value 1. The value minOverlap may also need 
+# change fracOverlap to be the value 1. The value minOverlap may also need
 # adjusting based on your own read lengths. This is also set to include
-# multi-mapping reads using fractional counts by default. Please remove 
+# multi-mapping reads using fractional counts by default. Please remove
 # "-M --fraction" to disable this
 featureCounts:
   minQual: 1
