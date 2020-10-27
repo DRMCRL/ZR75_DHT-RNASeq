@@ -2,10 +2,10 @@
 #SBATCH -p batch
 #SBATCH -N 1
 #SBATCH -n 4
-#SBATCH --time=1:00:00
+#SBATCH --time=12:00:00
 #SBATCH --mem=32GB
-#SBATCH -o /home/a1018048/slurm/20131906_MDA-MB-453_DHT-RNASeq/%x_%j.out
-#SBATCH -e /home/a1018048/slurm/20131906_MDA-MB-453_DHT-RNASeq/%x_%j.err
+#SBATCH -o /home/a1018048/slurm/ZR75_DHT-RNASeq/%x_%j.out
+#SBATCH -e /home/a1018048/slurm/ZR75_DHT-RNASeq/%x_%j.err
 #SBATCH --mail-type=END
 #SBATCH --mail-type=FAIL
 #SBATCH --mail-user=stephen.pederson@adelaide.edu.au
@@ -26,7 +26,7 @@ else
 fi
 
 ## Project Root
-PROJ=${HPC}/users/a1018048/20131906_MDA-MB-453_DHT-RNASeq
+PROJ=${HPC}/users/a1018048/ZR75_DHT-RNASeq
 
 ## The environment containing snakemake
 micromamba activate snakemake
