@@ -1,0 +1,37 @@
+                                 Started job on |	Oct 27 19:03:49
+                             Started mapping on |	Oct 27 19:04:47
+                                    Finished on |	Oct 27 19:04:59
+       Mapping speed, Million of reads per hour |	552.90
+
+                          Number of input reads |	1843015
+                      Average input read length |	39
+                                    UNIQUE READS:
+                   Uniquely mapped reads number |	1388125
+                        Uniquely mapped reads % |	75.32%
+                          Average mapped length |	39.39
+                       Number of splices: Total |	120873
+            Number of splices: Annotated (sjdb) |	120303
+                       Number of splices: GT/AG |	119756
+                       Number of splices: GC/AG |	896
+                       Number of splices: AT/AC |	101
+               Number of splices: Non-canonical |	120
+                      Mismatch rate per base, % |	0.17%
+                         Deletion rate per base |	0.00%
+                        Deletion average length |	1.36
+                        Insertion rate per base |	0.00%
+                       Insertion average length |	1.18
+                             MULTI-MAPPING READS:
+        Number of reads mapped to multiple loci |	424882
+             % of reads mapped to multiple loci |	23.05%
+        Number of reads mapped to too many loci |	21173
+             % of reads mapped to too many loci |	1.15%
+                                  UNMAPPED READS:
+  Number of reads unmapped: too many mismatches |	0
+       % of reads unmapped: too many mismatches |	0.00%
+            Number of reads unmapped: too short |	2933
+                 % of reads unmapped: too short |	0.16%
+                Number of reads unmapped: other |	5902
+                     % of reads unmapped: other |	0.32%
+                                  CHIMERIC READS:
+                       Number of chimeric reads |	0
+                            % of chimeric reads |	0.00%
