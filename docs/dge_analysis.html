@@ -14,7 +14,7 @@
 
 <title>Differential Gene Expression</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -27,6 +27,14 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.15/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
 
 <link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/master/img/reproducible.png">
 <!-- Add a small amount of space between sections. -->
@@ -546,16 +554,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLZR75DHTRNASeqtreee54873a9c25f1b665ea4d03e50738f00b3b2d006targetblanke54873aa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/tree/e54873a9c25f1b665ea4d03e50738f00b3b2d006" target="_blank">e54873a</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLZR75DHTRNASeqtree1184fd99543e023357a7a42060b1e84b642cb13ctargetblank1184fd9a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/tree/1184fd99543e023357a7a42060b1e84b642cb13c" target="_blank">1184fd9</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLZR75DHTRNASeqtreee54873a9c25f1b665ea4d03e50738f00b3b2d006targetblanke54873aa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLZR75DHTRNASeqtree1184fd99543e023357a7a42060b1e84b642cb13ctargetblank1184fd9a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/tree/e54873a9c25f1b665ea4d03e50738f00b3b2d006" target="_blank">e54873a</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/tree/1184fd99543e023357a7a42060b1e84b642cb13c" target="_blank">1184fd9</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -567,6 +575,8 @@ Ignored files:
     Ignored:    .snakemake/
 
 Untracked files:
+    Untracked:  output/ZR75_DHT_RNASeq.tsv
+    Untracked:  output/dge.rds
     Untracked:  output/genesGR.rds
 
 </code></pre>
@@ -611,6 +621,40 @@ Message
 Rmd
 </td>
 <td>
+<a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/blob/1184fd99543e023357a7a42060b1e84b642cb13c/analysis/dge_analysis.Rmd" target="_blank">1184fd9</a>
+</td>
+<td>
+Steve Ped
+</td>
+<td>
+2020-10-28
+</td>
+<td>
+Modified default analysis. There are problems.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DRMCRL/ZR75_DHT-RNASeq/9e9880203cbbf92add45f2bec7369abc8b8abc76/docs/dge_analysis.html" target="_blank">9e98802</a>
+</td>
+<td>
+Steve Ped
+</td>
+<td>
+2020-10-28
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
 <a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/blob/893e694530dbb98c2c8ce4eb7344e28f81c2e212/analysis/dge_analysis.Rmd" target="_blank">893e694</a>
 </td>
 <td>
@@ -637,7 +681,13 @@ library(pander)
 library(glue)
 library(edgeR)
 library(AnnotationHub)
-library(ensembldb)</code></pre>
+library(ensembldb)
+library(cowplot)
+library(ggfortify)
+library(magrittr)
+library(cqn)
+library(ggrepel)
+library(DT)</code></pre>
 <pre class="r"><code>panderOptions(&quot;table.split.table&quot;, Inf)
 panderOptions(&quot;big.mark&quot;, &quot;,&quot;)
 theme_set(theme_bw())</code></pre>
@@ -647,38 +697,10 @@ suffix &lt;- paste0(config$tag)
 sp &lt;- config$ref$species %&gt;%
   str_replace(&quot;(^[a-z])[a-z]*_([a-z]+)&quot;, &quot;\\1\\2&quot;) %&gt;%
   str_to_title()</code></pre>
-<pre class="r"><code>samples &lt;- config$samples %&gt;%
-  here::here() %&gt;%
-  read_tsv() %&gt;%
-  mutate(
-    Filename = paste0(sample, suffix)
-  ) %&gt;%
-  mutate_if(
-    function(x){length(unique(x)) &lt; length(x)},
-    as.factor
-  )</code></pre>
-<pre class="r"><code>config$analysis &lt;- config$analysis %&gt;%
-  lapply(intersect, y = colnames(samples)) %&gt;%
-  .[vapply(., length, integer(1)) &gt; 0]</code></pre>
-<pre class="r"><code>if (length(config$analysis)) {
-  samples &lt;- samples %&gt;%
-    unite(
-      col = group, 
-      any_of(as.character(unlist(config$analysis))), 
-      sep = &quot;_&quot;, remove = FALSE
-    ) 
-} else {
-  samples$group &lt;- samples$Filename
-}</code></pre>
-<pre class="r"><code>group_cols &lt;- hcl.colors(
-  n = length(unique(samples$group)), 
-  palette = &quot;Zissou 1&quot;
-  ) %&gt;%
-  setNames(unique(samples$group))</code></pre>
 <div id="setup" class="section level1">
 <h1>Setup</h1>
-<div id="annotations" class="section level2">
-<h2>Annotations</h2>
+<div id="gene-annotations" class="section level2">
+<h2>Gene Annotations</h2>
 <pre class="r"><code>ah &lt;- AnnotationHub() %&gt;%
   subset(rdataclass == &quot;EnsDb&quot;) %&gt;%
   subset(str_detect(description, as.character(config$ref$release))) %&gt;%
@@ -688,6 +710,111 @@ stopifnot(length(ah) == 1)</code></pre>
 genesGR &lt;- read_rds(here::here(&quot;output/genesGR.rds&quot;))</code></pre>
 <p>Gene annotations were again loaded from Ensembl Release 101. The <a href="qc_aligned.html#Annotation_Setup">previously defined</a> <code>GenomicRanges</code> object containing GC content and Gene Length was also loaded, containing information for 67,990 genes.</p>
 </div>
+<div id="sample-merging" class="section level2">
+<h2>Sample Merging</h2>
+<pre class="r"><code>samples &lt;- config$samples %&gt;%
+  here::here() %&gt;%
+  read_tsv() %&gt;%
+  mutate(
+    Filename = paste0(sample, suffix)
+  ) %&gt;%
+  dplyr::select(Filename, flowcell_id, treat, rep, desc) %&gt;%
+  dplyr::rename(name = desc) %&gt;%
+  mutate_if(
+    function(x){length(unique(x)) &lt; length(x)},
+    as.factor
+  ) %&gt;%
+  mutate(
+    treat = relevel(treat, ref = &quot;Vehicle&quot;)
+  )</code></pre>
+<pre class="r"><code>mergedSamples &lt;- samples %&gt;%
+  group_by(name, rep, treat) %&gt;%
+  tally()</code></pre>
+<pre class="r"><code>pander(
+  mergedSamples,
+  caption = &quot;*Summary of sequencing total runs for all samples*&quot;
+)</code></pre>
+<table style="width:39%;">
+<caption><em>Summary of sequencing total runs for all samples</em></caption>
+<colgroup>
+<col width="11%" />
+<col width="8%" />
+<col width="13%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">name</th>
+<th align="center">rep</th>
+<th align="center">treat</th>
+<th align="center">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">ZR1-D</td>
+<td align="center">1</td>
+<td align="center">DHT</td>
+<td align="center">8</td>
+</tr>
+<tr class="even">
+<td align="center">ZR3-D</td>
+<td align="center">3</td>
+<td align="center">DHT</td>
+<td align="center">8</td>
+</tr>
+<tr class="odd">
+<td align="center">ZR3-V</td>
+<td align="center">3</td>
+<td align="center">Vehicle</td>
+<td align="center">8</td>
+</tr>
+<tr class="even">
+<td align="center">ZR4-D</td>
+<td align="center">4</td>
+<td align="center">DHT</td>
+<td align="center">8</td>
+</tr>
+<tr class="odd">
+<td align="center">ZR4-V</td>
+<td align="center">4</td>
+<td align="center">Vehicle</td>
+<td align="center">8</td>
+</tr>
+<tr class="even">
+<td align="center">ZR5-D</td>
+<td align="center">5</td>
+<td align="center">DHT</td>
+<td align="center">8</td>
+</tr>
+<tr class="odd">
+<td align="center">ZR6-V</td>
+<td align="center">6</td>
+<td align="center">Vehicle</td>
+<td align="center">8</td>
+</tr>
+<tr class="even">
+<td align="center">ZR7-D</td>
+<td align="center">7</td>
+<td align="center">DHT</td>
+<td align="center">8</td>
+</tr>
+</tbody>
+</table>
+<p>This data set is slightly unique in that samples were sequenced across multiple lanes and flowcells. Metadata was re-organised to enable summarising of counts across the multiple sequencing runs obtained for every sample. The <a href="qc_aligned.html#pca">initial PCA</a> showed that variability between replicates and flowcells was dwarfed by variability between samples. As such, all counts were able to be merged to give a single set of counts for each individual sample.</p>
+<p><strong>Importantly</strong>, this dataset has a different structure to the 453 and 223 datasets, in that the <em>strict pairing of replicates between Vehicle &amp; DHT-treated is not present.</em> As such, the same workflow <strong>cannot</strong> be followed and an accompanying loss of power for detection of DE genes is to be expected.</p>
+<pre class="r"><code>treat_cols &lt;- hcl.colors(
+  n = length(levels(mergedSamples$treat)), 
+  palette = &quot;Red-Blue&quot;, 
+  rev = TRUE
+  ) %&gt;%
+  setNames(levels(mergedSamples$treat)) 
+rep_cols &lt;- hcl.colors(
+  n = length(levels(mergedSamples$rep)), 
+  palette = &quot;Spectral&quot;
+  ) %&gt;%
+  setNames(levels(mergedSamples$rep))</code></pre>
+</div>
 <div id="count-data" class="section level2">
 <h2>Count Data</h2>
 <pre class="r"><code>counts &lt;- here::here(&quot;data/aligned/counts/counts.out&quot;) %&gt;%
@@ -696,13 +823,645 @@ genesGR &lt;- read_rds(here::here(&quot;output/genesGR.rds&quot;))</code></pre>
   rename_at(vars(ends_with(&quot;bam&quot;)), dirname) %&gt;%
   rename_all(basename) %&gt;%
   column_to_rownames(&quot;Geneid&quot;)</code></pre>
-<pre class="r"><code>dge &lt;- DGEList(
-  counts = counts,
-  samples = column_to_rownames(samples, &quot;Filename&quot;)[colnames(counts),],
-  genes = mcols(genesGR[rownames(counts)])[, c(&quot;gene_id&quot;, &quot;gene_name&quot;, &quot;gene_biotype&quot;, &quot;entrezid&quot;, &quot;longest_tx&quot;, &quot;ave_tx_len&quot;, &quot;gc_content&quot;)]
-) %&gt;%
+<pre class="r"><code>mergedCounts &lt;- counts %&gt;%
+  rownames_to_column(&quot;gene_id&quot;) %&gt;%
+  pivot_longer(
+    cols = -gene_id,
+    names_to = &quot;Filename&quot;,
+    values_to = &quot;counts&quot;
+  ) %&gt;%
+  left_join(samples) %&gt;%
+  group_by(
+    gene_id, name, rep, treat
+  ) %&gt;%
+  summarise(counts = sum(counts), .groups = &quot;drop&quot;) %&gt;%
+  pivot_wider(
+    id_cols = gene_id,
+    values_from = counts,
+    names_from = name
+  ) %&gt;%
+  column_to_rownames(&quot;gene_id&quot;)</code></pre>
+<pre class="r"><code>minCPM &lt;- 1.5
+minSamples &lt;- ncol(mergedCounts) / 2
+genes2Keep &lt;- mergedCounts %&gt;%
+  cpm() %&gt;%
+  is_greater_than(minCPM) %&gt;%
+  rowSums() %&gt;%
+  is_weakly_greater_than(minSamples) </code></pre>
+<p>The criteria for a gene to be considered as detected, <span class="math inline">\(&gt;\)</span> 1.5 counts per million (CPM) were required to observed in <span class="math inline">\(\geq\)</span> 4 samples. This effectively ensured <span class="math inline">\(\geq\)</span> 10 counts in at least 4 merged libraries.</p>
+<p>Of the 60,671 genes contained in the annotation for this release, 45,152 genes were removed as failing this criteria for detection, leaving 15,519 genes for downstream analysis.</p>
+<pre class="r"><code>a &lt;- mergedCounts %&gt;%
+  cpm(log = TRUE) %&gt;%
+  as.data.frame() %&gt;%
+  rownames_to_column(&quot;gene_id&quot;) %&gt;%
+  as_tibble() %&gt;%
+  pivot_longer(
+    cols = contains(&quot;ZR&quot;),
+    names_to = &quot;name&quot;,
+    values_to = &quot;logCPM&quot;
+  ) %&gt;%
+  left_join(samples) %&gt;%
+  ggplot(aes(logCPM, stat(density), colour = rep, linetype = treat)) +
+  geom_density() +
+  scale_colour_manual(values= rep_cols) +
+  labs(
+    y = &quot;Density&quot;,
+    colour = &quot;Replicate&quot;,
+    linetype = &quot;Treatment&quot;
+  )
+b &lt;- mergedCounts[genes2Keep,] %&gt;%
+  cpm(log = TRUE) %&gt;%
+  as.data.frame() %&gt;%
+  rownames_to_column(&quot;gene_id&quot;) %&gt;%
+  as_tibble() %&gt;%
+  pivot_longer(
+    cols = contains(&quot;ZR&quot;),
+    names_to = &quot;name&quot;,
+    values_to = &quot;logCPM&quot;
+  ) %&gt;%
+  left_join(samples) %&gt;%
+  ggplot(aes(logCPM, stat(density), colour = rep, linetype = treat)) +
+  geom_density() +
+  scale_colour_manual(values= rep_cols) +
+  labs(
+    y = &quot;Density&quot;,
+    colour = &quot;Replicate&quot;,
+    linetype = &quot;Treatment&quot;
+  )
+plot_grid(
+  a + theme(legend.position = &quot;none&quot;), 
+  b + theme(legend.position = &quot;none&quot;), 
+  get_legend(a),
+  labels = c(&quot;A&quot;, &quot;B&quot;),
+  rel_widths = c(4, 4, 1),
+  nrow = 1
+)</code></pre>
+<div class="figure" style="text-align: center">
+<img src="figure/dge_analysis.Rmd/plotDensities-1.png" alt="*Distributions of logCPM values for merged counts, A) before and B) after filtering of undetectable genes. Some differences between replicates were noted.*" width="960" />
+<p class="caption">
+<em>Distributions of logCPM values for merged counts, A) before and B) after filtering of undetectable genes. Some differences between replicates were noted.</em>
+</p>
+</div>
+<pre class="r"><code>dge &lt;- mergedCounts[genes2Keep,] %&gt;%
+  DGEList(
+    samples = mergedSamples %&gt;%
+      as.data.frame() %&gt;%
+      set_rownames(.$name) %&gt;%
+      .[,colnames(.)],
+    group = mergedSamples %&gt;%
+      as.data.frame() %&gt;%
+      set_rownames(.$name) %&gt;%
+      .[,colnames(.)] %&gt;%
+      pull(treat),
+    genes = genesGR[rownames(.)]
+  ) %&gt;%
   calcNormFactors()</code></pre>
-<p>Prior to filtering for undetectable genes, counts were loaded as a <code>DGEList</code>, incorporating both sample and gene metadata.</p>
+</div>
+</div>
+<div id="qc" class="section level1">
+<h1>QC</h1>
+<div id="library-sizes" class="section level2">
+<h2>Library Sizes</h2>
+<pre class="r"><code>dge$samples %&gt;%
+  ggplot(aes(name, lib.size, fill = treat)) +
+  geom_col() +
+  geom_hline(yintercept = 1e7, linetype = 2) +
+  facet_grid(~treat, scales = &quot;free_x&quot;, space = &quot;free&quot;) +
+  scale_y_continuous(
+    labels = comma, expand = expansion(c(0, 0.05))
+  ) +
+  scale_fill_manual(values= treat_cols) +
+  labs(x = &quot;Sample Name&quot;, y = &quot;Library Size&quot;) +
+  theme(legend.position = &quot;none&quot;) </code></pre>
+<div class="figure" style="text-align: center">
+<img src="figure/dge_analysis.Rmd/plotLibSizes-1.png" alt="*Library sizes after removal of undetectable genes. The common-use minimum library size of 10 million reads is shown as a dashed line.*" width="960" />
+<p class="caption">
+<em>Library sizes after removal of undetectable genes. The common-use minimum library size of 10 million reads is shown as a dashed line.</em>
+</p>
+</div>
+<p>Given that previous work had only assessed the libraries prior to merging, the library sizes were checked after merging replicate sequencing runs. The median library size was found to be 13.7 million reads which is just above the common-use minimum recommendation of 10 million reads/sample.</p>
+</div>
+<div id="pca-pre-normalisation" class="section level2">
+<h2>PCA: Pre Normalisation</h2>
+<pre class="r"><code>pca &lt;- dge %&gt;%
+  cpm(log = TRUE) %&gt;%
+  t() %&gt;%
+  prcomp() </code></pre>
+<pre class="r"><code>a &lt;- pca %&gt;%
+  autoplot(
+    data = dge$samples, 
+    x = 1, y = 3,
+    colour = &quot;rep&quot;, 
+    shape = &quot;treat&quot;, 
+    size = 3
+  ) +
+  scale_colour_manual(values= rep_cols) +
+  labs(
+    colour = &quot;Replicate&quot;,
+    shape = &quot;Treatment&quot;
+  )
+b &lt;- pca %&gt;%
+  autoplot(
+    data = dge$samples, 
+    x = 2, y = 3,
+    colour = &quot;rep&quot;, 
+    shape = &quot;treat&quot;, 
+    size = 3
+  ) +
+  scale_colour_manual(values= rep_cols) +
+  labs(
+    colour = &quot;Replicate&quot;,
+    shape = &quot;Treatment&quot;
+  )
+c &lt;- pca %&gt;%
+  autoplot(
+    data = dge$samples, 
+    x = 1, y = 2,
+    colour = &quot;rep&quot;, 
+    shape = &quot;treat&quot;, 
+    size = 3
+  ) +
+  geom_segment(
+    aes(
+      x = Vehicle_PC1, xend = DHT_PC1, 
+      y = Vehicle_PC2, yend = DHT_PC2,
+      colour = rep
+    ),
+    data = . %&gt;%
+      dplyr::select(any_of(colnames(dge$samples)), PC1, PC2) %&gt;% 
+      pivot_longer(cols = starts_with(&quot;PC&quot;), names_to = &quot;PC&quot;, values_to = &quot;value&quot;) %&gt;% 
+      pivot_wider(names_from = c(&quot;treat&quot;, &quot;PC&quot;), values_from = value, id_cols = c(&quot;rep&quot;)),
+    alpha = 0.4,
+    arrow = arrow()
+  ) +
+  scale_colour_manual(values= rep_cols) +
+  labs(
+    colour = &quot;Replicate&quot;,
+    shape = &quot;Treatment&quot;
+  )
+plot_grid(
+  a + theme(legend.position = &quot;none&quot;), 
+  b + theme(legend.position = &quot;none&quot;),
+  c + theme(legend.position = &quot;none&quot;),
+  get_legend(a),
+  labels = LETTERS[1:3],
+  nrow = 2
+)</code></pre>
+<div class="figure" style="text-align: center">
+<img src="figure/dge_analysis.Rmd/plotPCA-1.png" alt="*PCA on logCPM from merged counts. Only two replicates have paired samples across both treatments and only three Vehicle samples were identified. Some separation between treatment groups is evident across PC2 &amp; PC3*" width="768" />
+<p class="caption">
+<em>PCA on logCPM from merged counts. Only two replicates have paired samples across both treatments and only three Vehicle samples were identified. Some separation between treatment groups is evident across PC2 &amp; PC3</em>
+</p>
+</div>
+</div>
+<div id="checks-for-gc-and-length-bias" class="section level2">
+<h2>Checks for GC and Length bias</h2>
+<p>Given the clear unexpected variability captured by PC1, the impact of GC content or length bias was assessed as a possible source.</p>
+<p>Genes were divided in 10 approximately equal sized bins based on increasing length, and 10 approximately equal sized bins based on increasing GC content, with the final GC/Length bins being the combination 100 bins using both sets. The contribution of each gene to PC1 and PC2 was assessed and a t-test performed on each bin. This tests</p>
+<p><span class="math display">\[
+H_0: \mu = 0 \text{ against } H_A: \mu \neq 0
+\]</span></p>
+<p>where <span class="math inline">\(\mu\)</span> represents the true contribution to PC1 of all genes in that bin.</p>
+<p>If any bin makes a contribution to PC1 the mean will be clearly non-zero, whilst if there is no contribution the mean will be near zero. In this way, the impact of gene length and GC content on variance within the dataset can be assessed. As seen below, the contribution of GC content and gene length to PC1 is very clear, with a smaller contribution being evident across PC2. As a result, Conditional Quantile Normalisation (<code>CQN</code>) is recommended in preference to the more common TMM normalisation.</p>
+<pre class="r"><code>dge$genes %&gt;%
+  dplyr::select(gene_id, ave_tx_len, gc_content) %&gt;%
+  mutate(
+    GC = cut(
+      x = gc_content,
+      labels = seq_len(10),
+      breaks = quantile(gc_content, probs = seq(0, 1, length.out = 11)),
+      include.lowest = TRUE
+    ),
+    Length = cut(
+      x = ave_tx_len,
+      labels = seq_len(10),
+      breaks = quantile(ave_tx_len, probs = seq(0, 1, length.out = 11)),
+      include.lowest = TRUE
+    ),
+    bin = paste(GC, Length, sep = &quot;_&quot;),
+    PC1 = pca$rotation[gene_id, &quot;PC1&quot;],
+    PC2 = pca$rotation[gene_id, &quot;PC2&quot;]
+  ) %&gt;%
+  pivot_longer(
+    cols = c(&quot;PC1&quot;, &quot;PC2&quot;),
+    names_to = &quot;PC&quot;,
+    values_to = &quot;value&quot;
+  ) %&gt;%
+  group_by(PC, GC, Length, bin) %&gt;%
+  summarise(
+    Size = n(),
+    mean = mean(value),
+    sd = sd(value),
+    t = t.test(value)$statistic,
+    p = t.test(value)$p.value,
+    adjP = p.adjust(p, method = &quot;bonf&quot;)
+  ) %&gt;%
+  ggplot(
+    aes(Length, GC, colour = t, alpha = -log10(adjP), size = Size)
+  ) +
+  geom_point() +
+  facet_wrap(~PC) +
+  scale_colour_gradient2() +
+  scale_size_continuous(range = c(1, 10)) +
+  labs(alpha = expression(paste(-log[10], p))) +
+  theme(
+    panel.grid = element_blank(),
+    legend.position = &quot;bottom&quot;
+  ) </code></pre>
+<div class="figure" style="text-align: center">
+<img src="figure/dge_analysis.Rmd/plotPCA_GC_Length-1.png" alt="*Contribution of each GC/Length Bin to PC1 and PC2. Fill colours indicate the t-statistic, with tranparency denoting significance as -log10(p), using Bonferroni-adjusted p-values. The number of genes in each bin is indicated by the circle size. The clear pattern across PC1 is unambiguous.*" width="960" />
+<p class="caption">
+<em>Contribution of each GC/Length Bin to PC1 and PC2. Fill colours indicate the t-statistic, with tranparency denoting significance as -log10(p), using Bonferroni-adjusted p-values. The number of genes in each bin is indicated by the circle size. The clear pattern across PC1 is unambiguous.</em>
+</p>
+</div>
+<p>Given these results, the considered options for analysis are:</p>
+<ul>
+<li>Use CQN normalisation and GLM-QL Fits</li>
+</ul>
+</div>
+<div id="normalisation" class="section level2">
+<h2>Normalisation</h2>
+<pre class="r"><code>cqNorm &lt;- with(
+  dge,
+  cqn(
+    counts= counts,
+    x = genes$gc_content,
+    lengths = genes$ave_tx_len
+  )
+)
+dge$offset &lt;- cqNorm$glm.offset
+logCPM &lt;- cqNorm$y + cqNorm$offset</code></pre>
+<pre class="r"><code>a &lt;- cqNorm$func1 %&gt;%
+  as.data.frame() %&gt;%
+  mutate(x = cqNorm$grid1) %&gt;%
+  pivot_longer(
+    cols = any_of(colnames(dge)),
+    names_to = &quot;name&quot;,
+    values_to = &quot;QR fit&quot;
+  ) %&gt;%
+  left_join(dge$samples) %&gt;%
+  ggplot(
+    aes(x, `QR fit`, colour = rep, group = name, linetype = treat)
+  ) +
+  geom_line() +
+  labs(x = &quot;GC content&quot;, colour = &quot;Replicate&quot;, linetype = &quot;Treatment&quot;)
+b &lt;- cqNorm$func2 %&gt;%
+  as.data.frame() %&gt;%
+  mutate(x = cqNorm$grid2) %&gt;%
+  pivot_longer(
+    cols = any_of(colnames(dge)),
+    names_to = &quot;name&quot;,
+    values_to = &quot;QR fit&quot;
+  ) %&gt;%
+  left_join(dge$samples) %&gt;%
+  ggplot(
+    aes(x, `QR fit`, colour = rep, group = name, linetype = treat)
+  ) +
+  geom_line() +
+  labs(
+    x = expression(paste(log[10], &quot; Gene Length (kb)&quot;)),
+    colour = &quot;Replicate&quot;, linetype = &quot;Treatment&quot;
+  )
+plot_grid(
+  a + theme(legend.position = &quot;none&quot;), 
+  b + theme(legend.position = &quot;none&quot;),
+  get_legend(a),
+  nrow = 1,
+  rel_widths = c(3, 3, 1)
+)</code></pre>
+<div class="figure" style="text-align: center">
+<img src="figure/dge_analysis.Rmd/plotCQN-1.png" alt="*Model fits used when applying CQN. The clear relationship between the two pairs which are present is in keeping with the previous PCA analysis.*" width="960" />
+<p class="caption">
+<em>Model fits used when applying CQN. The clear relationship between the two pairs which are present is in keeping with the previous PCA analysis.</em>
+</p>
+</div>
+<pre class="r"><code>pcaPost &lt;- logCPM %&gt;%
+  t() %&gt;%
+  prcomp() </code></pre>
+<pre class="r"><code>a &lt;- pcaPost %&gt;%
+  autoplot(
+    data = dge$samples, 
+    x = 1, y = 3,
+    colour = &quot;rep&quot;, 
+    shape = &quot;treat&quot;, 
+    size = 3
+  ) +
+  scale_colour_manual(values= rep_cols) +
+  labs(
+    colour = &quot;Replicate&quot;,
+    shape = &quot;Treatment&quot;
+  )
+b &lt;- pcaPost %&gt;%
+  autoplot(
+    data = dge$samples, 
+    x = 2, y = 3,
+    colour = &quot;rep&quot;, 
+    shape = &quot;treat&quot;, 
+    size = 3
+  ) +
+  scale_colour_manual(values= rep_cols) +
+  labs(
+    colour = &quot;Replicate&quot;,
+    shape = &quot;Treatment&quot;
+  )
+c &lt;- pcaPost %&gt;%
+  autoplot(
+    data = dge$samples, 
+    x = 1, y = 2,
+    colour = &quot;rep&quot;, 
+    shape = &quot;treat&quot;, 
+    size = 3
+  ) +
+  geom_segment(
+    aes(
+      x = Vehicle_PC1, xend = DHT_PC1, 
+      y = Vehicle_PC2, yend = DHT_PC2,
+      colour = rep
+    ),
+    data = . %&gt;%
+      dplyr::select(any_of(colnames(dge$samples)), PC1, PC2) %&gt;% 
+      pivot_longer(cols = starts_with(&quot;PC&quot;), names_to = &quot;PC&quot;, values_to = &quot;value&quot;) %&gt;% 
+      pivot_wider(names_from = c(&quot;treat&quot;, &quot;PC&quot;), values_from = value, id_cols = c(&quot;rep&quot;)),
+    alpha = 0.4,
+    arrow = arrow()
+  ) +
+  scale_colour_manual(values= rep_cols) +
+  labs(
+    colour = &quot;Replicate&quot;,
+    shape = &quot;Treatment&quot;
+  )
+plot_grid(
+  a + theme(legend.position = &quot;none&quot;), 
+  b + theme(legend.position = &quot;none&quot;),
+  c + theme(legend.position = &quot;none&quot;),
+  get_legend(a),
+  labels = LETTERS[1:3],
+  nrow = 2
+)</code></pre>
+<div class="figure" style="text-align: center">
+<img src="figure/dge_analysis.Rmd/plotPcaPost-1.png" alt="*PCA on logCPM after performing CQN. As with the data before normalisation, PC2 and PC3 appear to capture the majority of the biological signal*" width="768" />
+<p class="caption">
+<em>PCA on logCPM after performing CQN. As with the data before normalisation, PC2 and PC3 appear to capture the majority of the biological signal</em>
+</p>
+</div>
+<pre class="r"><code>dge$genes %&gt;%
+  dplyr::select(gene_id, ave_tx_len, gc_content) %&gt;%
+  mutate(
+    GC = cut(
+      x = gc_content,
+      labels = seq_len(10),
+      breaks = quantile(gc_content, probs = seq(0, 1, length.out = 11)),
+      include.lowest = TRUE
+    ),
+    Length = cut(
+      x = ave_tx_len,
+      labels = seq_len(10),
+      breaks = quantile(ave_tx_len, probs = seq(0, 1, length.out = 11)),
+      include.lowest = TRUE
+    ),
+    bin = paste(GC, Length, sep = &quot;_&quot;),
+    `pre-CQN` = pca$rotation[gene_id, &quot;PC1&quot;],
+    `post-CQN` = pcaPost$rotation[gene_id, &quot;PC1&quot;]
+  ) %&gt;%
+  pivot_longer(
+    cols = c(&quot;pre-CQN&quot;, &quot;post-CQN&quot;),
+    names_to = &quot;status&quot;,
+    values_to = &quot;value&quot;
+  ) %&gt;%
+  mutate(status = factor(status, levels = c(&quot;pre-CQN&quot;, &quot;post-CQN&quot;))) %&gt;%
+  group_by(status, GC, Length, bin) %&gt;%
+  summarise(
+    Size = n(),
+    mean = mean(value),
+    sd = sd(value),
+    t = t.test(value)$statistic,
+    p = t.test(value)$p.value,
+    FDR = p.adjust(p, method = &quot;bonf&quot;),
+    .groups = &#39;drop&#39;
+  ) %&gt;%
+  ggplot(
+    aes(Length, GC, colour = t, alpha = -log10(FDR), size = Size)
+  ) +
+  geom_point() +
+  facet_wrap(~status) +
+  scale_colour_gradient2() +
+  scale_size_continuous(range = c(1, 10)) +
+  theme(
+    panel.grid = element_blank(),
+    legend.position = &quot;bottom&quot;
+  ) </code></pre>
+<div class="figure" style="text-align: center">
+<img src="figure/dge_analysis.Rmd/plotPCA_GC_post-1.png" alt="*Contributions of gene length and GC content to PC1 shown both before and after CQN. The strong patterns seen before normalisation have clearly been reduced. Fill colours indicate the t-statistic, with tranparency denoting significance as -log10(p), using Bonferroni-adjusted p-values. The number of genes in each bin is indicated by the circle size. The clear pattern across PC1 is unambiguous.*" width="960" />
+<p class="caption">
+<em>Contributions of gene length and GC content to PC1 shown both before and after CQN. The strong patterns seen before normalisation have clearly been reduced. Fill colours indicate the t-statistic, with tranparency denoting significance as -log10(p), using Bonferroni-adjusted p-values. The number of genes in each bin is indicated by the circle size. The clear pattern across PC1 is unambiguous.</em>
+</p>
+</div>
+<p>CQN clearly had a positive impact on the data, however, the exclusion of replicate 2 may still be an option. Given the consistency seen with the post-CQN PCA, using a blocking approach will also be the preferred analytic approach.</p>
+</div>
+</div>
+<div id="differential-expression-analysis" class="section level1">
+<h1>Differential Expression Analysis</h1>
+<div id="main-results" class="section level2">
+<h2>Main Results</h2>
+<p>As the strict paring between replicates was not present in this dataset, the fitted effect was simply that of DHT treatment. Dispersions were estimated for the main <code>DGEList</code> object and the model fitted using the Quasi-likelihood GLM.</p>
+<pre class="r"><code>X &lt;- model.matrix(~treat, data = dge$samples) %&gt;%
+  set_colnames(str_remove(colnames(.), &quot;treat&quot;))
+dge &lt;- estimateDisp(dge, design = X, robust = TRUE)
+fit &lt;- glmQLFit(dge)</code></pre>
+<pre class="r"><code>alpha &lt;- 0.05
+lambda &lt;- log2(1)
+topTable &lt;- glmTreat(fit, coef = &quot;DHT&quot;, lfc = lambda) %&gt;%
+  topTags(n = Inf) %&gt;%
+  .[[&quot;table&quot;]] %&gt;%
+  as_tibble() %&gt;%
+  mutate(
+    location = paste0(seqnames, &quot;:&quot;, start, &quot;-&quot;, end, &quot;:&quot;, strand),
+    rankingStat = -sign(logFC)*log10(PValue),
+    signedRank = rank(rankingStat),
+    DE = FDR &lt; alpha
+  ) %&gt;%
+  dplyr::select(
+    gene_id, gene_name, logCPM, logFC, PValue, FDR, 
+    location, gene_biotype, entrezid, ave_tx_len, gc_content, 
+    rankingStat, signedRank, DE
+  )</code></pre>
+<pre><code>Zero log2-FC threshold detected. Switch to glmQLFTest() instead. </code></pre>
+<pre class="r"><code>de &lt;- dplyr::filter(topTable, DE)$gene_id
+up &lt;- dplyr::filter(topTable, DE, logFC &gt; 0)$gene_id
+down &lt;- dplyr::filter(topTable, DE, logFC &lt; 0)$gene_id</code></pre>
+<p>In order to detect genes which respond to DHT the Null Hypothesis (<span class="math inline">\(H_0\)</span>) was specified to be a range around zero, instead of the conventional point-value.</p>
+<p><span class="math display">\[
+H_0: -\lambda \leq \mu \leq \lambda \\
+\text{Vs.} \\
+H_A: |\mu| &gt; \lambda
+\]</span></p>
+<p>This characterises <span class="math inline">\(H_0\)</span> as being a range instead of being the singularity 0, with <span class="math inline">\(\mu\)</span> representing the true mean logFC. The default value of <span class="math inline">\(\lambda = \log_2 1 = 0\)</span> was chosen. This removes any requirement for <em>post hoc</em> filtering based on logFC. Using this approach, 5 genes were considered as DE to an FDR of 0.05. Of these, 5 were up-regulated with the remaining 0 being down-regulated.</p>
+<pre class="r"><code>topTable %&gt;%
+  ggplot(aes(logCPM, logFC)) +
+  geom_point(
+    aes(colour = DE),
+    alpha = 0.5
+  ) +
+  geom_text_repel(
+    aes(label = gene_name, colour = DE),
+    data = . %&gt;%
+      dplyr::filter(logFC &gt; 1.8 | logFC &lt; -1),
+    show.legend = FALSE
+  ) +
+  geom_smooth(se = FALSE) +
+  scale_colour_manual(
+    values = c(&quot;grey50&quot;, &quot;red&quot;)
+  ) +
+  theme(
+    legend.position = &quot;none&quot;
+  )</code></pre>
+<div class="figure" style="text-align: center">
+<img src="figure/dge_analysis.Rmd/plotMA-1.png" alt="*MA plot with blue curve through the data showing the GAM fit. The curve for low-expressed genes indicated a potential bias remains in the data, whilst this is not evident for highly expressed genes. DE genes are highlighted in red.*" width="960" />
+<p class="caption">
+<em>MA plot with blue curve through the data showing the GAM fit. The curve for low-expressed genes indicated a potential bias remains in the data, whilst this is not evident for highly expressed genes. DE genes are highlighted in red.</em>
+</p>
+</div>
+<pre class="r"><code>topTable %&gt;%
+  ggplot(aes(logFC, -log10(PValue))) +
+  geom_point(
+    aes(colour = DE),
+    alpha = 0.5
+  ) +
+  geom_text_repel(
+    aes(label = gene_name, colour = DE),
+    data = . %&gt;%
+      dplyr::filter(abs(logFC) &gt; 1.4 | PValue &lt; 1e-4),
+    show.legend = FALSE
+  ) +
+  geom_vline(xintercept = c(-1,1), colour = &quot;blue&quot;, linetype = 2) +
+  labs(
+    y = expression(paste(-log[10], &quot;p&quot;))
+  ) +
+  scale_colour_manual(
+    values = c(&quot;grey50&quot;, &quot;red&quot;)
+  ) +
+  theme(
+    legend.position = &quot;none&quot;
+  )</code></pre>
+<div class="figure" style="text-align: center">
+<img src="figure/dge_analysis.Rmd/plotVolcano-1.png" alt="*Volcano plot showing significance against log fold-change. The common-use cutoff values for considering a gene as DE (|logFC| &gt; 1) are shown in blue as a guide only as these were not used for this analysis.*" width="960" />
+<p class="caption">
+<em>Volcano plot showing significance against log fold-change. The common-use cutoff values for considering a gene as DE (|logFC| &gt; 1) are shown in blue as a guide only as these were not used for this analysis.</em>
+</p>
+</div>
+<pre class="r"><code>topTable %&gt;%
+  dplyr::filter(DE) %&gt;%
+  dplyr::select(-DE, -gc_content, -ave_tx_len, -contains(&quot;rank&quot;)) %&gt;%
+  mutate(
+    across(c(&quot;logFC&quot;, &quot;logCPM&quot;), round, digits = 2)
+  ) %&gt;%
+  datatable(
+    rownames = FALSE, 
+    caption = glue(&quot;All genes were considered as DE using the criteria of an FDR-adjusted p-value &lt; {alpha}.&quot;)
+  ) %&gt;%
+  formatSignif(
+    columns = c(&quot;PValue&quot;, &quot;FDR&quot;),
+    digits = 3
+  )</code></pre>
+<div id="htmlwidget-43bfbf22be9ab3c92e85" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-43bfbf22be9ab3c92e85">{"x":{"filter":"none","caption":"<caption>All genes were considered as DE using the criteria of an FDR-adjusted p-value &lt; 0.05.<\/caption>","data":[["ENSG00000100003","ENSG00000169213","ENSG00000182352","ENSG00000156853","ENSG00000104205"],["SEC14L2","RAB3B","C17orf77","ZNF689","SGK3"],[6.07,2.82,3.01,6.43,4.16],[3.37,1.89,2.99,2.48,1.39],[7.87294401354207e-09,4.86096332922809e-07,6.71999408119388e-07,8.02332133663339e-06,1.47845072142197e-05],[0.000122180218146159,0.00347625293820159,0.00347625293820159,0.0311284809558034,0.0458881534914952],["22:30396941-30425303:+","1:51907956-51990700:-","17:74584679-74594209:+","16:30602558-30624012:-","8:66712734-66862022:+"],["protein_coding","protein_coding","lncRNA","protein_coding","protein_coding"],[23541,5865,146723,115509,23678]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>gene_id<\/th>\n      <th>gene_name<\/th>\n      <th>logCPM<\/th>\n      <th>logFC<\/th>\n      <th>PValue<\/th>\n      <th>FDR<\/th>\n      <th>location<\/th>\n      <th>gene_biotype<\/th>\n      <th>entrezid<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"targets":4,"render":"function(data, type, row, meta) { return DTWidget.formatSignif(data, 3, 3, \",\", \".\"); }"},{"targets":5,"render":"function(data, type, row, meta) { return DTWidget.formatSignif(data, 3, 3, \",\", \".\"); }"},{"className":"dt-right","targets":[2,3,4,5]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render"],"jsHooks":[]}</script>
+<div id="top-de-genes" class="section level3">
+<h3>Top DE Genes</h3>
+<p>logCPM values for the most up and down-regulated genes were also inspected using simple boxplots.</p>
+<div class="figure" style="text-align: center">
+<img src="figure/dge_analysis.Rmd/plotTopUp-1.png" alt="*Top ranked up-regulated genes*" width="960" />
+<p class="caption">
+<em>Top ranked up-regulated genes</em>
+</p>
+</div>
+<div class="figure" style="text-align: center">
+<img src="figure/dge_analysis.Rmd/plotTopDown-1.png" alt="*Top ranked down-regulated genes. None were formally considered as DE*" width="960" />
+<p class="caption">
+<em>Top ranked down-regulated genes. None were formally considered as DE</em>
+</p>
+</div>
+</div>
+</div>
+<div id="checks-for-bias" class="section level2">
+<h2>Checks For Bias</h2>
+<p>Using the sign of logFC to indicate direction, and -<span class="math inline">\(\log_{10} p\)</span> as the ranking statistic, bias was also checked within the set of results, using GC content and gene length as potential sources of bias amongst the set of DE genes.</p>
+<pre class="r"><code>a &lt;- topTable %&gt;%
+  ggplot(aes(signedRank, gc_content)) +
+  geom_point(aes(colour = DE), alpha = 0.4) +
+  geom_smooth(se = FALSE) +
+  geom_hline(yintercept = mean(topTable$gc_content)) +
+  labs(
+    x = &quot;Rank&quot;, y = &quot;% GC Content&quot;
+  ) +
+  scale_colour_manual(values = c(&quot;grey50&quot;, &quot;red&quot;)) + 
+  theme(legend.position = &quot;none&quot;)
+b &lt;- topTable %&gt;%
+    ggplot(aes(gc_content, stat(density))) +
+    geom_density(colour = &quot;grey50&quot;) +
+    geom_vline(xintercept = mean(topTable$gc_content)) +
+    coord_flip() + 
+    theme(
+      axis.text = element_blank(),
+      axis.title = element_blank(),
+      axis.ticks = element_blank(),
+      panel.grid.major.x = element_blank(),
+      panel.grid.minor.x = element_blank()
+    )
+c &lt;- topTable %&gt;%
+  ggplot(aes(signedRank, ave_tx_len)) +
+  geom_point(aes(colour = DE), alpha = 0.4) +
+  geom_smooth(se = FALSE) +
+  geom_hline(yintercept = 10^mean(log10(topTable$ave_tx_len))) +
+  labs(
+    x = &quot;Rank&quot;, y = &quot;Gene Length (nt)&quot;
+  ) +
+  scale_y_log10(label = comma) +
+  scale_colour_manual(values = c(&quot;grey50&quot;, &quot;red&quot;)) + 
+  theme(legend.position = &quot;none&quot;)
+d &lt;- topTable %&gt;%
+  ggplot(aes(ave_tx_len, stat(density))) +
+  geom_density(colour = &quot;grey50&quot;) +
+  geom_vline(xintercept = 10^mean(log10(topTable$ave_tx_len))) +
+  coord_flip() + 
+  scale_x_log10() +
+  theme(
+    axis.text = element_blank(),
+    axis.title = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank()
+  )
+plot_grid(
+  plot_grid(ngsReports:::.emptyPlot(&quot;&quot;), a, b, rel_widths = c(0.35, 9, 1), align = &quot;h&quot;, nrow = 1),
+  plot_grid(c, d, rel_widths = c(9, 1), align = &quot;h&quot;),
+  nrow = 2,
+  rel_heights = c(1, 1),
+  labels = c(&quot;A&quot;, &quot;B&quot;),
+  align = &quot;v&quot;,
+  axis = &quot;l&quot;
+)</code></pre>
+<div class="figure" style="text-align: center">
+<img src="figure/dge_analysis.Rmd/plotBias-1.png" alt="*Genes ranked for signed differential expression shown against A) GC Content, and B) Gene Length. Ranks were assigned based on the ranking statistic R = -sign(logFC)*log~10~p, such that genes at the left are most down-regulated, whilst those at the right are the most up-regulated. Horizontal black lines indicate the overall average value, whilst blue curves indicate the localised GAM fit. A small positive bias was noted at both extremes for both GC content and Gene Length.*" width="960" />
+<p class="caption">
+<em>Genes ranked for signed differential expression shown against A) GC Content, and B) Gene Length. Ranks were assigned based on the ranking statistic R = -sign(logFC)</em>log<sub>10</sub>p, such that genes at the left are most down-regulated, whilst those at the right are the most up-regulated. Horizontal black lines indicate the overall average value, whilst blue curves indicate the localised GAM fit. A small positive bias was noted at both extremes for both GC content and Gene Length.*
+</p>
+</div>
+</div>
+<div id="data-export" class="section level2">
+<h2>Data Export</h2>
+<p>These above results were exported as the file <code>ZR75_DHT_RNASeq.tsv</code>.</p>
+<pre class="r"><code>topTable %&gt;%
+  mutate(
+    entrezid = vapply(entrezid, str_flatten, character(1), collapse = &quot;;&quot;)
+  ) %&gt;%
+  write_tsv(
+    file = here::here(&quot;output/ZR75_DHT_RNASeq.tsv&quot;)
+  )</code></pre>
+<p>In addition, the final <code>DGEList</code> was exported for easier integration with subsequent analyses</p>
+<pre class="r"><code>write_rds(
+  dge,
+  file = here::here(&quot;output/dge.rds&quot;)
+)</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -728,67 +1487,86 @@ locale:
 [11] LC_MEASUREMENT=en_AU.UTF-8 LC_IDENTIFICATION=C       
 
 attached base packages:
-[1] stats4    parallel  stats     graphics  grDevices utils     datasets 
-[8] methods   base     
+ [1] splines   stats4    parallel  stats     graphics  grDevices utils    
+ [8] datasets  methods   base     
 
 other attached packages:
- [1] ensembldb_2.12.1        AnnotationFilter_1.12.0 GenomicFeatures_1.40.1 
- [4] AnnotationDbi_1.50.3    Biobase_2.48.0          GenomicRanges_1.40.0   
- [7] GenomeInfoDb_1.24.2     IRanges_2.22.2          S4Vectors_0.26.1       
-[10] AnnotationHub_2.20.2    BiocFileCache_1.12.1    dbplyr_1.4.4           
-[13] BiocGenerics_0.34.0     edgeR_3.30.3            limma_3.44.3           
-[16] glue_1.4.2              pander_0.6.3            scales_1.1.1           
-[19] yaml_2.2.1              forcats_0.5.0           stringr_1.4.0          
-[22] dplyr_1.0.2             purrr_0.3.4             readr_1.4.0            
-[25] tidyr_1.1.2             tibble_3.0.3            ggplot2_3.3.2          
-[28] tidyverse_1.3.0         workflowr_1.6.2        
+ [1] DT_0.15                 ggrepel_0.8.2           cqn_1.34.0             
+ [4] quantreg_5.73           SparseM_1.78            preprocessCore_1.50.0  
+ [7] nor1mix_1.3-0           mclust_5.4.6            magrittr_1.5           
+[10] ggfortify_0.4.11        cowplot_1.1.0           ensembldb_2.12.1       
+[13] AnnotationFilter_1.12.0 GenomicFeatures_1.40.1  AnnotationDbi_1.50.3   
+[16] Biobase_2.48.0          GenomicRanges_1.40.0    GenomeInfoDb_1.24.2    
+[19] IRanges_2.22.2          S4Vectors_0.26.1        AnnotationHub_2.20.2   
+[22] BiocFileCache_1.12.1    dbplyr_1.4.4            BiocGenerics_0.34.0    
+[25] edgeR_3.30.3            limma_3.44.3            glue_1.4.2             
+[28] pander_0.6.3            scales_1.1.1            yaml_2.2.1             
+[31] forcats_0.5.0           stringr_1.4.0           dplyr_1.0.2            
+[34] purrr_0.3.4             readr_1.4.0             tidyr_1.1.2            
+[37] tibble_3.0.3            ggplot2_3.3.2           tidyverse_1.3.0        
+[40] workflowr_1.6.2        
 
 loaded via a namespace (and not attached):
- [1] colorspace_1.4-1              ellipsis_0.3.1               
- [3] rprojroot_1.3-2               XVector_0.28.0               
- [5] fs_1.5.0                      rstudioapi_0.11              
- [7] bit64_4.0.5                   interactiveDisplayBase_1.26.3
- [9] fansi_0.4.1                   lubridate_1.7.9              
-[11] xml2_1.3.2                    knitr_1.30                   
-[13] jsonlite_1.7.1                Rsamtools_2.4.0              
-[15] broom_0.7.1                   shiny_1.5.0                  
-[17] BiocManager_1.30.10           compiler_4.0.3               
-[19] httr_1.4.2                    backports_1.1.10             
-[21] lazyeval_0.2.2                assertthat_0.2.1             
-[23] Matrix_1.2-18                 fastmap_1.0.1                
-[25] cli_2.0.2                     later_1.1.0.1                
-[27] htmltools_0.5.0               prettyunits_1.1.1            
-[29] tools_4.0.3                   gtable_0.3.0                 
-[31] GenomeInfoDbData_1.2.3        rappdirs_0.3.1               
-[33] Rcpp_1.0.5                    cellranger_1.1.0             
-[35] vctrs_0.3.4                   Biostrings_2.56.0            
-[37] rtracklayer_1.48.0            xfun_0.18                    
-[39] rvest_0.3.6                   mime_0.9                     
-[41] lifecycle_0.2.0               XML_3.99-0.5                 
-[43] zlibbioc_1.34.0               ProtGenerics_1.20.0          
-[45] hms_0.5.3                     promises_1.1.1               
-[47] SummarizedExperiment_1.18.2   curl_4.3                     
-[49] memoise_1.1.0                 biomaRt_2.44.1               
-[51] stringi_1.5.3                 RSQLite_2.2.1                
-[53] BiocVersion_3.11.1            BiocParallel_1.22.0          
-[55] matrixStats_0.57.0            rlang_0.4.7                  
-[57] pkgconfig_2.0.3               bitops_1.0-6                 
-[59] evaluate_0.14                 lattice_0.20-41              
-[61] GenomicAlignments_1.24.0      bit_4.0.4                    
-[63] tidyselect_1.1.0              here_0.1                     
-[65] magrittr_1.5                  R6_2.4.1                     
-[67] generics_0.0.2                DelayedArray_0.14.1          
-[69] DBI_1.1.0                     pillar_1.4.6                 
-[71] haven_2.3.1                   whisker_0.4                  
-[73] withr_2.3.0                   RCurl_1.98-1.2               
-[75] modelr_0.1.8                  crayon_1.3.4                 
-[77] rmarkdown_2.4                 progress_1.2.2               
-[79] locfit_1.5-9.4                grid_4.0.3                   
-[81] readxl_1.3.1                  blob_1.2.1                   
-[83] git2r_0.27.1                  reprex_0.3.0                 
-[85] digest_0.6.25                 xtable_1.8-4                 
-[87] httpuv_1.5.4                  openssl_1.4.3                
-[89] munsell_0.5.0                 askpass_1.1                  </code></pre>
+  [1] readxl_1.3.1                  backports_1.1.10             
+  [3] plyr_1.8.6                    lazyeval_0.2.2               
+  [5] crosstalk_1.1.0.1             BiocParallel_1.22.0          
+  [7] digest_0.6.25                 htmltools_0.5.0              
+  [9] fansi_0.4.1                   memoise_1.1.0                
+ [11] cluster_2.1.0                 Biostrings_2.56.0            
+ [13] modelr_0.1.8                  matrixStats_0.57.0           
+ [15] askpass_1.1                   prettyunits_1.1.1            
+ [17] jpeg_0.1-8.1                  colorspace_1.4-1             
+ [19] blob_1.2.1                    rvest_0.3.6                  
+ [21] rappdirs_0.3.1                haven_2.3.1                  
+ [23] xfun_0.18                     crayon_1.3.4                 
+ [25] RCurl_1.98-1.2                jsonlite_1.7.1               
+ [27] zoo_1.8-8                     gtable_0.3.0                 
+ [29] zlibbioc_1.34.0               XVector_0.28.0               
+ [31] MatrixModels_0.4-1            DelayedArray_0.14.1          
+ [33] DBI_1.1.0                     Rcpp_1.0.5                   
+ [35] viridisLite_0.3.0             xtable_1.8-4                 
+ [37] progress_1.2.2                flashClust_1.01-2            
+ [39] bit_4.0.4                     htmlwidgets_1.5.2            
+ [41] httr_1.4.2                    RColorBrewer_1.1-2           
+ [43] ellipsis_0.3.1                pkgconfig_2.0.3              
+ [45] XML_3.99-0.5                  farver_2.0.3                 
+ [47] locfit_1.5-9.4                here_0.1                     
+ [49] reshape2_1.4.4                tidyselect_1.1.0             
+ [51] labeling_0.3                  rlang_0.4.7                  
+ [53] later_1.1.0.1                 munsell_0.5.0                
+ [55] BiocVersion_3.11.1            cellranger_1.1.0             
+ [57] tools_4.0.3                   cli_2.0.2                    
+ [59] generics_0.0.2                RSQLite_2.2.1                
+ [61] broom_0.7.1                   ggdendro_0.1.22              
+ [63] evaluate_0.14                 fastmap_1.0.1                
+ [65] knitr_1.30                    bit64_4.0.5                  
+ [67] fs_1.5.0                      nlme_3.1-149                 
+ [69] whisker_0.4                   mime_0.9                     
+ [71] leaps_3.1                     xml2_1.3.2                   
+ [73] biomaRt_2.44.1                compiler_4.0.3               
+ [75] rstudioapi_0.11               png_0.1-7                    
+ [77] plotly_4.9.2.1                curl_4.3                     
+ [79] interactiveDisplayBase_1.26.3 reprex_0.3.0                 
+ [81] statmod_1.4.34                stringi_1.5.3                
+ [83] highr_0.8                     lattice_0.20-41              
+ [85] ProtGenerics_1.20.0           Matrix_1.2-18                
+ [87] vctrs_0.3.4                   pillar_1.4.6                 
+ [89] lifecycle_0.2.0               BiocManager_1.30.10          
+ [91] data.table_1.13.0             bitops_1.0-6                 
+ [93] conquer_1.0.2                 httpuv_1.5.4                 
+ [95] rtracklayer_1.48.0            latticeExtra_0.6-29          
+ [97] hwriter_1.3.2                 R6_2.4.1                     
+ [99] ShortRead_1.46.0              promises_1.1.1               
+[101] gridExtra_2.3                 MASS_7.3-53                  
+[103] ngsReports_1.5.6              assertthat_0.2.1             
+[105] SummarizedExperiment_1.18.2   openssl_1.4.3                
+[107] rprojroot_1.3-2               withr_2.3.0                  
+[109] GenomicAlignments_1.24.0      Rsamtools_2.4.0              
+[111] GenomeInfoDbData_1.2.3        mgcv_1.8-33                  
+[113] hms_0.5.3                     grid_4.0.3                   
+[115] rmarkdown_2.4                 git2r_0.27.1                 
+[117] scatterplot3d_0.3-41          shiny_1.5.0                  
+[119] lubridate_1.7.9               FactoMineR_2.3               </code></pre>
 </div>
 </div>
 </div>
