@@ -80,8 +80,9 @@ samples <- config$samples %>%
   mutate(
     Filename = paste0(sample, suffix)
   ) %>%
-  dplyr::select(Filename, flowcell_id, treat, rep, desc) %>%
-  dplyr::rename(name = desc) %>%
+  dplyr::select(Filename, flowcell_id, treat, rep, desc, run) %>%
+  mutate(name = str_extract(desc, "ZR[0-9].++")) %>%
+  dplyr::select(-desc) %>%
   mutate_if(
     function(x){length(unique(x)) < length(x)},
     as.factor
@@ -91,9 +92,20 @@ samples <- config$samples %>%
   )
 ```
 
+### QC Issues
+
+Given that `SLX-7489.D712_D503` was identified as being low quality in previous QC steps, this sample was removed for subsequent analysis.
+An apparent sequencing repeat of this sample (Replicate 4, Vehicle-treated) was identified in Run2 and it was assumed that this was performed in response to the initial low quality run.
+
+```{r}
+samples <- samples %>%
+  dplyr::filter(!grepl("SLX-7489.D712_D503", Filename))
+```
+
+
 ```{r mergedSamples}
 mergedSamples <- samples %>%
-  group_by(name, rep, treat) %>%
+  group_by(name, rep, treat, run) %>%
   tally()
 ```
 
@@ -108,9 +120,6 @@ This data set is slightly unique in that samples were sequenced across multiple 
 Metadata was re-organised to enable summarising of counts across the multiple sequencing runs obtained for every sample.
 The [initial PCA](qc_aligned.html#pca) showed that variability between replicates and flowcells was dwarfed by variability between samples.
 As such, all counts were able to be merged to give a single set of counts for each individual sample.
-
-**Importantly**, this dataset has a different structure to the 453 and 223 datasets, in that the *strict pairing of replicates between Vehicle & DHT-treated is not present.*
-As such, the same workflow **cannot** be followed and an accompanying loss of power for detection of DE genes is to be expected.
 
 
 ```{r set_cols}
@@ -136,7 +145,8 @@ counts <- here::here("data/aligned/counts/counts.out") %>%
   dplyr::select(Geneid, ends_with("bam")) %>%
   rename_at(vars(ends_with("bam")), dirname) %>%
   rename_all(basename) %>%
-  column_to_rownames("Geneid")
+  column_to_rownames("Geneid") %>%
+  .[,!grepl("SLX-7489.D712_D503", colnames(.))]
 ```
 
 ```{r mergedCounts}
@@ -175,7 +185,7 @@ This effectively ensured $\geq$ `r ceiling(min(colSums(mergedCounts))/1e6)` coun
 
 Of the `r comma(nrow(counts))` genes contained in the annotation for this release, `r comma(sum(!genes2Keep))` genes  were removed as failing this criteria for detection, leaving `r comma(sum(genes2Keep))` genes for downstream analysis.
 
-```{r plotDensities, fig.height=5, fig.cap="*Distributions of logCPM values for merged counts, A) before and B) after filtering of undetectable genes. Some differences between replicates were noted.*"}
+```{r plotDensities, fig.height=5, fig.cap="*Distributions of logCPM values on merged counts, A) before and B) after filtering of undetectable genes. Some differences between replicates were noted.*"}
 a <- mergedCounts %>%
   cpm(log = TRUE) %>%
   as.data.frame() %>%
@@ -251,7 +261,7 @@ dge$samples %>%
   ggplot(aes(name, lib.size, fill = treat)) +
   geom_col() +
   geom_hline(yintercept = 1e7, linetype = 2) +
-  facet_grid(~treat, scales = "free_x", space = "free") +
+  facet_wrap(~treat, scales = "free_x") +
   scale_y_continuous(
     labels = comma, expand = expansion(c(0, 0.05))
   ) +
@@ -263,7 +273,6 @@ dge$samples %>%
 Given that previous work had only assessed the libraries prior to merging, the library sizes were checked after merging replicate sequencing runs.
 The median library size was found to be `r round(median(colSums(mergedCounts[genes2Keep,] ))/1e6, 1)` million reads which is just above the common-use minimum recommendation of 10 million reads/sample.
 
-
 ## PCA: Pre Normalisation
 
 ```{r pca}
@@ -274,7 +283,7 @@ pca <- dge %>%
 ```
 
 
-```{r plotPCA, fig.height=8, fig.width=8, fig.cap="*PCA on logCPM from merged counts. Only two replicates have paired samples across both treatments and only three Vehicle samples were identified. Some separation between treatment groups is evident across PC2 & PC3*"}
+```{r plotPCA, fig.height=8, fig.width=8, fig.cap="*PCA on logCPM from merged counts. No clear structure attributable to DHT treatment is evident. PC1 appears to capture the variability between replicates whilst PC2 captures much of the response in Replicates 1 & 3. However, the DHT responses seen in the remaining samples are relatively minimal.*"}
 a <- pca %>%
   autoplot(
     data = dge$samples, 
@@ -409,7 +418,8 @@ dge$genes %>%
 Given these results, the considered options for analysis are:
 
 - Use CQN normalisation and GLM-QL Fits
-
+- Use limma/voom to take advantage of the ability to down-weight samples
+- Exclude replicate 2, in combination with either of the above strategies
 
 ## Normalisation
 
@@ -426,7 +436,7 @@ dge$offset <- cqNorm$glm.offset
 logCPM <- cqNorm$y + cqNorm$offset
 ```
 
-```{r plotCQN, fig.height=6, fig.cap = "*Model fits used when applying CQN. The clear relationship between the two pairs which are present is in keeping with the previous PCA analysis.*"}
+```{r plotCQN, fig.height=6, fig.cap = "*Model fits used when applying CQN. replicates 1 & 3 are again quite divergent here. In particular, the long genes with low GC content appear to be where the primary differences are found, in keeping with the previous PCA analysis.*"}
 a <- cqNorm$func1 %>%
   as.data.frame() %>%
   mutate(x = cqNorm$grid1) %>%
@@ -473,7 +483,7 @@ pcaPost <- logCPM %>%
   prcomp() 
 ```
 
-```{r plotPcaPost, fig.height=8, fig.width=8, fig.cap="*PCA on logCPM after performing CQN. As with the data before normalisation, PC2 and PC3 appear to capture the majority of the biological signal*"}
+```{r plotPcaPost, fig.height=8, fig.width=8, fig.cap="*PCA on logCPM after performing CQN. No specific improvement was noted as a result of CQN, unlike other cell-lines.*"}
 a <- pcaPost %>%
   autoplot(
     data = dge$samples, 
@@ -570,8 +580,7 @@ dge$genes %>%
     sd = sd(value),
     t = t.test(value)$statistic,
     p = t.test(value)$p.value,
-    FDR = p.adjust(p, method = "bonf"),
-    .groups = 'drop'
+    FDR = p.adjust(p, method = "bonf")
   ) %>%
   ggplot(
     aes(Length, GC, colour = t, alpha = -log10(FDR), size = Size)
@@ -593,11 +602,11 @@ Given the consistency seen with the post-CQN PCA, using a blocking approach will
 
 ## Main Results
 
-As the strict paring between replicates was not present in this dataset, the fitted effect was simply that of DHT treatment.
-Dispersions were estimated for the main `DGEList` object and the model fitted using the Quasi-likelihood GLM.
+A design matrix was formed giving each replicate it's own baseline and the common DHT response was then specified as the final column.
+Following this, dispersions were estimated for the main `DGEList` object and the model fitted using the Quasi-likelihood GLM.
 
 ```{r fit}
-X <- model.matrix(~treat, data = dge$samples) %>%
+X <- model.matrix(~0 + rep + treat, data = dge$samples) %>%
   set_colnames(str_remove(colnames(.), "treat"))
 dge <- estimateDisp(dge, design = X, robust = TRUE)
 fit <- glmQLFit(dge)
@@ -606,7 +615,7 @@ fit <- glmQLFit(dge)
 
 ```{r topTable}
 alpha <- 0.05
-lambda <- log2(1)
+lambda <- log2(1.2)
 topTable <- glmTreat(fit, coef = "DHT", lfc = lambda) %>%
   topTags(n = Inf) %>%
   .[["table"]] %>%
@@ -652,7 +661,7 @@ topTable %>%
   geom_text_repel(
     aes(label = gene_name, colour = DE),
     data = . %>%
-      dplyr::filter(logFC > 1.8 | logFC < -1),
+      dplyr::filter(logFC > 1.5 | logFC < -1),
     show.legend = FALSE
   ) +
   geom_smooth(se = FALSE) +
@@ -675,7 +684,7 @@ topTable %>%
   geom_text_repel(
     aes(label = gene_name, colour = DE),
     data = . %>%
-      dplyr::filter(abs(logFC) > 1.4 | PValue < 1e-4),
+      dplyr::filter(PValue < 2e-6 | (DE & logFC < 0)),
     show.legend = FALSE
   ) +
   geom_vline(xintercept = c(-1,1), colour = "blue", linetype = 2) +
@@ -714,7 +723,7 @@ logCPM values for the most up and down-regulated genes were also inspected using
 
 ```{r plotTopUp, fig.height=8, echo=FALSE, fig.cap="*Top ranked up-regulated genes*"}
 topTable %>%
-  dplyr::filter(logFC > 0) %>%
+  dplyr::filter(DE & logFC > 0) %>%
   dplyr::slice(1:12) %>%
   dplyr::select(gene_id, gene_name) %>%
   mutate(gene_name = fct_inorder(gene_name)) %>%
@@ -736,9 +745,9 @@ topTable %>%
   scale_fill_manual(values = treat_cols)
 ```
 
-```{r plotTopDown, fig.height=8, echo=FALSE, fig.cap = "*Top ranked down-regulated genes. None were formally considered as DE*"}
+```{r plotTopDown, fig.height=4, fig.width=6, echo=FALSE, fig.cap = "*Top ranked down-regulated genes*"}
 topTable %>%
-  dplyr::filter(logFC < 0) %>%
+  dplyr::filter(DE & logFC < 0) %>%
   dplyr::slice(1:12) %>%
   dplyr::select(gene_id, gene_name) %>%
   mutate(gene_name = fct_inorder(gene_name)) %>%
@@ -823,10 +832,9 @@ plot_grid(
 )
 ```
 
-
 ## Data Export
 
-These above results were exported as the file `ZR75_DHT_RNASeq.tsv`.
+These above results were exported as the file `ZR75_DHT-RNASeq.tsv`.
 
 ```{r exportDE}
 topTable %>%
@@ -834,7 +842,7 @@ topTable %>%
     entrezid = vapply(entrezid, str_flatten, character(1), collapse = ";")
   ) %>%
   write_tsv(
-    file = here::here("output/ZR75_DHT_RNASeq.tsv")
+    file = here::here("output/ZR75_DHT-RNASeq.tsv")
   )
 ```
 
