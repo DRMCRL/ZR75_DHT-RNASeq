@@ -1,0 +1,37 @@
+                                 Started job on |	Oct 29 04:14:22
+                             Started mapping on |	Oct 29 04:15:21
+                                    Finished on |	Oct 29 04:15:31
+       Mapping speed, Million of reads per hour |	97.51
+
+                          Number of input reads |	270854
+                      Average input read length |	39
+                                    UNIQUE READS:
+                   Uniquely mapped reads number |	227160
+                        Uniquely mapped reads % |	83.87%
+                          Average mapped length |	39.48
+                       Number of splices: Total |	24159
+            Number of splices: Annotated (sjdb) |	24012
+                       Number of splices: GT/AG |	23901
+                       Number of splices: GC/AG |	203
+                       Number of splices: AT/AC |	30
+               Number of splices: Non-canonical |	25
+                      Mismatch rate per base, % |	0.13%
+                         Deletion rate per base |	0.00%
+                        Deletion average length |	1.44
+                        Insertion rate per base |	0.00%
+                       Insertion average length |	1.14
+                             MULTI-MAPPING READS:
+        Number of reads mapped to multiple loci |	40114
+             % of reads mapped to multiple loci |	14.81%
+        Number of reads mapped to too many loci |	1997
+             % of reads mapped to too many loci |	0.74%
+                                  UNMAPPED READS:
+  Number of reads unmapped: too many mismatches |	0
+       % of reads unmapped: too many mismatches |	0.00%
+            Number of reads unmapped: too short |	369
+                 % of reads unmapped: too short |	0.14%
+                Number of reads unmapped: other |	1214
+                     % of reads unmapped: other |	0.45%
+                                  CHIMERIC READS:
+                       Number of chimeric reads |	0
+                            % of chimeric reads |	0.00%

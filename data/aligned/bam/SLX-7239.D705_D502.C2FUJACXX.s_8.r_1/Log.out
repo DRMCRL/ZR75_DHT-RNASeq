@@ -258,7 +258,7 @@ Number of real (reference) chromosomes= 194
 193	KI270392.1	971	3137863680
 194	KI270394.1	970	3138125824
 --sjdbOverhang = 39 taken from the generated genome
-Started loading the genome: Tue Oct 27 18:47:58 2020
+Started loading the genome: Thu Oct 29 03:22:48 2020
 
 Genome: size given as a parameter = 3168817741
 SA: size given as a parameter = 24551119745
@@ -272,85 +272,85 @@ Loading Genome ... done! state: good=1 eof=0 fail=0 bad=0; loaded 3168817741 byt
 SA file size: 24551119745 bytes; state: good=1 eof=0 fail=0 bad=0
 Loading SA ... done! state: good=1 eof=0 fail=0 bad=0; loaded 24551119745 bytes
 Loading SAindex ... done: 1565873619 bytes
-Finished loading the genome: Tue Oct 27 18:49:43 2020
+Finished loading the genome: Thu Oct 29 03:23:36 2020
 
 Processing splice junctions database sjdbN=385187,   pGe.sjdbOverhang=39 
 alignIntronMax=alignMatesGapMax=0, the max intron size will be approximately determined by (2^winBinNbits)*winAnchorDistNbins=589824
 Created thread # 1
 Created thread # 2
-Starting to map file # 0
-mate 1:   data/trimmed/fastq/SLX-7239.D705_D502.C2FUJACXX.s_8.r_1.fq.gz
 Created thread # 3
 Created thread # 4
+Starting to map file # 0
+mate 1:   data/trimmed/fastq/SLX-7239.D705_D502.C2FUJACXX.s_8.r_1.fq.gz
 Created thread # 5
 Created thread # 6
 Created thread # 7
-BAM sorting: 350574 mapped reads
+BAM sorting: 350559 mapped reads
 BAM sorting bins genomic start loci:
-1	0	13781798
-2	0	84670732
-3	0	153757595
-4	0	182384653
-5	0	228097637
-6	1	77829413
-7	2	3768609
-8	2	65854901
-9	3	2797167
-10	3	49269897
-11	3	104265464
-12	4	45963939
-13	5	73276732
-14	6	43793043
-15	7	681526
-16	7	22503688
-17	7	70005327
-18	8	30449632
-19	8	59663949
-20	8	82087727
-21	10	1822942
-22	10	37335235
-23	11	38071135
-24	11	172596847
-25	12	30396938
-26	13	8210588
-27	13	8259699
-28	13	8437448
-29	13	44770317
-30	14	50467548
-31	15	75431163
-32	15	195687917
-33	16	119419974
-34	17	60752442
-35	17	138556038
-36	18	31644126
-37	18	131587792
-38	19	29921114
-39	19	112353364
-40	20	56961547
-41	21	33043663
-42	21	133019592
-43	22	6689
-44	22	11559
-45	23	68600251
-46	37	130802
-47	40	172113
-48	51	114998
-Thread #4 end of input stream, nextChar=-1
-Completed: thread #3
-Completed: thread #6
-Completed: thread #4
-Completed: thread #5
+1	0	15565979
+2	0	77632334
+3	0	153618836
+4	0	182398145
+5	0	228097643
+6	1	75180860
+7	2	1759587
+8	2	65501363
+9	3	753747
+10	3	49128898
+11	3	100624787
+12	4	44434600
+13	5	67334620
+14	6	43595108
+15	6	100648585
+16	7	21426853
+17	7	68834477
+18	8	28634666
+19	8	58004107
+20	8	82081614
+21	10	1438881
+22	10	35745954
+23	11	36479661
+24	11	169499588
+25	12	25299859
+26	13	8210266
+27	13	8258293
+28	13	8437359
+29	13	44326912
+30	14	46615623
+31	15	69021085
+32	15	192799247
+33	16	112610363
+34	17	55944728
+35	17	135348997
+36	18	30894556
+37	18	116453390
+38	19	26196956
+39	19	104668651
+40	20	47976898
+41	21	15527074
+42	21	129098058
+43	22	6410
+44	22	10884
+45	23	53551279
+46	25	1006381
+47	40	172012
+48	51	113843
+Thread #7 end of input stream, nextChar=-1
+Completed: thread #2
 Completed: thread #7
 Completed: thread #0
-Completed: thread #2
+Completed: thread #4
+Completed: thread #5
+Completed: thread #6
 Completed: thread #1
 Joined thread # 1
 Joined thread # 2
+Completed: thread #3
 Joined thread # 3
 Joined thread # 4
 Joined thread # 5
 Joined thread # 6
 Joined thread # 7
-Oct 27 18:50:02 ..... started sorting BAM
-Max memory needed for sorting = 12512288
+Oct 29 03:23:53 ..... started sorting BAM
+Max memory needed for sorting = 12560235
 ALL DONE!
