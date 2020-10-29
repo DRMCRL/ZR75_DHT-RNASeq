@@ -260,3 +260,7 @@ plotly::ggplotly(
     )
 )
 ```
+
+# Summary
+
+Whilst many of the aberrant behaviours in terms of sequence content have been resolved for `SLX-7489.D712_D503`, the low library sizes still remain problematic

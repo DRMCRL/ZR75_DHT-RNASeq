@@ -311,34 +311,40 @@ counts <- here::here("data/aligned/counts/counts.out") %>%
 - The numbers of genes with at least one read assigned ranged between `r pander(comma(range(colSums(apply(counts, MARGIN = 2, as.logical)))))` across all samples.
 
 ```{r plotDetectedGenes, fig.height=6, fig.width=8, fig.cap = "*Total numbers of genes detected across all samples and groups.*"}
-counts %>%
-  as_tibble() %>%
-  mutate(
-    across(everything(), as.logical)
-  ) %>%
-  summarise(
-    across(everything(), sum)
-  ) %>%
-  pivot_longer(
-    everything(), names_to = "Filename", values_to = "Detected"
-  ) %>%
-  left_join(samples) %>%
-  ggplot(aes(group, Detected, colour = group)) +
-  geom_point() +
-  geom_segment(
-    aes(xend = group, y = 0, yend = Detected),
-    data = . %>% 
-      group_by(group) %>%
-      summarise(Detected = min(Detected)),
-    colour = "black", size = 1/4) +
-  scale_y_continuous(labels = comma, expand = expansion(c(0, 0.05))) +
-  scale_colour_manual(values = group_cols) +
-  labs(
-    x = "Group", 
-    y = "Genes Detected",
-    colour = "Group"
-  )
+plotly::ggplotly(
+  counts %>%
+    as_tibble() %>%
+    mutate(
+      across(everything(), as.logical)
+    ) %>%
+    summarise(
+      across(everything(), sum)
+    ) %>%
+    pivot_longer(
+      everything(), names_to = "Filename", values_to = "Detected"
+    ) %>%
+    left_join(samples) %>%
+    ggplot(aes(group, Detected, colour = group, label = Filename)) +
+    geom_point() +
+    geom_segment(
+      aes(x = group, xend = group, y = 0, yend = Detected),
+      data = . %>%
+        group_by(group) %>%
+        summarise(Detected = min(Detected), .groups = "drop"),
+      colour = "black", size = 1/4,
+      inherit.aes = FALSE) +
+    scale_y_continuous(labels = comma, expand = expansion(c(0, 0.05))) +
+    scale_colour_manual(values = group_cols) +
+    labs(
+      x = "Group", 
+      y = "Genes Detected",
+      colour = "Group"
+    )
+)
 ```
+
+**The above plot has clearly highlighted the replicates associated with `SLX-7489.D712_D503` as being low quality in terms of the number of genes detected.**
+
 
 ```{r plotDetectedVsSamples, fig.height=6, fig.width=8, fig.cap = "*Total numbers of genes detected shown against the number of samples with at least one read assigned to each gene.*"}
 plotly::ggplotly(
@@ -414,6 +420,9 @@ plotly::ggplotly(
 )
 ```
 
+**The above plot has clearly highlighted the replicates associated with `SLX-7489.D712_D503` as being low quality in terms of library sizes.**
+
+
 ## PCA
 
 ### Sample Similarity
@@ -435,6 +444,8 @@ pca %>%
   labs(colour = "Group") +
   scale_colour_manual(values = group_cols)
 ```
+
+**The libraries associated with `SLX-7489.D712_D503` are shown spread relatively widely in the bottom left, whilst all other split samples cluster very closely, again confirming concerns with this sample**
 
 ### GC and Length Biases
 

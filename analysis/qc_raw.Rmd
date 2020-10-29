@@ -252,3 +252,9 @@ os %>%
   )
 ```
 
+# Summary
+
+The sample `SLX-7489.D712_D503` has been flagged as potentially problematic:
+
+- GC content appears quite divergent from the rest of the samples
+- Library Sizes are very low (< 280,000 per lane compared to > 1,500,00 in all others)
