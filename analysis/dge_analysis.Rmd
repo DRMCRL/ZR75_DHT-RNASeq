@@ -773,6 +773,7 @@ topTable %>%
 ## Checks For Bias
 
 Using the sign of logFC to indicate direction, and -$\log_{10} p$ as the ranking statistic, bias was also checked within the set of results, using GC content and gene length as potential sources of bias amongst the set of DE genes.
+Given the extremely low number of genes considered as DE, this was only minimally informative
 
 ```{r plotBias, fig.height = 8, fig.cap = "*Genes ranked for signed differential expression shown against A) GC Content, and B) Gene Length. Ranks were assigned based on the ranking statistic R = -sign(logFC)*log~10~p, such that genes at the left are most down-regulated, whilst those at the right are the most up-regulated. Horizontal black lines indicate the overall average value, whilst blue curves indicate the localised GAM fit. A small positive bias was noted at both extremes for both GC content and Gene Length.*"}
 a <- topTable %>%
