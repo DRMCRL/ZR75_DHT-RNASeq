@@ -97,7 +97,7 @@ samples <- config$samples %>%
 Given that `SLX-7489.D712_D503` was identified as being low quality in previous QC steps, this sample was removed for subsequent analysis.
 An apparent sequencing repeat of this sample (Replicate 4, Vehicle-treated) was identified in Run2 and it was assumed that this was performed in response to the initial low quality run.
 
-```{r}
+```{r filterSamples}
 samples <- samples %>%
   dplyr::filter(!grepl("SLX-7489.D712_D503", Filename))
 ```
@@ -854,5 +854,23 @@ write_rds(
   dge,
   file = here::here("output/dge.rds")
 )
+```
+
+The logCPM values were also exported
+
+```{r exportlogCPM}
+logCPM %>%
+  as.data.frame() %>%
+  rownames_to_column("gene_id") %>%
+  left_join(
+    mcols(genesGR) %>% as.data.frame()
+  ) %>%
+  as_tibble() %>%
+  dplyr::select(
+    gene_id, gene_name, starts_with("ZR")
+  ) %>%
+  write_tsv(
+    here::here("output", "ZR75_DHT-logCPM.tsv")
+  )
 ```
 
