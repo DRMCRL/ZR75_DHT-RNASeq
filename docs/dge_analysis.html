@@ -14,7 +14,8 @@
 
 <title>Differential Gene Expression</title>
 
-<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -33,8 +34,8 @@
 <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="site_libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 
 <link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/master/img/reproducible.png">
 <!-- Add a small amount of space between sections. -->
@@ -43,6 +44,8 @@ div.section {
   padding-top: 12px;
 }
 </style>
+
+
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -436,7 +439,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Differential Gene Expression</h1>
 <h4 class="author">Stephen Pederson<br>Dame Roma Mitchell Cancer Research Laboratories<br>Adelaide Medical School<br>University of Adelaide</h4>
-<h4 class="date">19 January, 2021</h4>
+<h4 class="date">29 January, 2021</h4>
 
 </div>
 
@@ -461,7 +464,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2021-01-19
+<strong>Last updated:</strong> 2021-01-29
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -552,16 +555,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLZR75DHTRNASeqtreef7085c58233e64a1e3f8ad6673e7b9e5f5e05a62targetblankf7085c5a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/tree/f7085c58233e64a1e3f8ad6673e7b9e5f5e05a62" target="_blank">f7085c5</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLZR75DHTRNASeqtree4920bdec84147ddb55d48fd99b706bc62a8cc26ctargetblank4920bdea"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/tree/4920bdec84147ddb55d48fd99b706bc62a8cc26c" target="_blank">4920bde</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLZR75DHTRNASeqtreef7085c58233e64a1e3f8ad6673e7b9e5f5e05a62targetblankf7085c5a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomDRMCRLZR75DHTRNASeqtree4920bdec84147ddb55d48fd99b706bc62a8cc26ctargetblank4920bdea" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/tree/f7085c58233e64a1e3f8ad6673e7b9e5f5e05a62" target="_blank">f7085c5</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/tree/4920bdec84147ddb55d48fd99b706bc62a8cc26c" target="_blank">4920bde</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -571,11 +574,6 @@ Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
     Ignored:    .snakemake/
-
-Unstaged changes:
-    Modified:   output/ZR75_DHT-RNASeq.tsv
-    Deleted:    output/ZR75_DHT_RNASeq.tsv
-    Modified:   output/dge.rds
 
 </code></pre>
 <p>
@@ -614,6 +612,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/blob/4920bdec84147ddb55d48fd99b706bc62a8cc26c/analysis/dge_analysis.Rmd" target="_blank">4920bde</a>
+</td>
+<td>
+Steve Ped
+</td>
+<td>
+2021-01-29
+</td>
+<td>
+Reduced lamba to log2(1.1)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/DRMCRL/ZR75_DHT-RNASeq/2b4da75e8ca9e34dcc739dd1a5c9fd2bf9507eb8/docs/dge_analysis.html" target="_blank">2b4da75</a>
+</td>
+<td>
+Steve Ped
+</td>
+<td>
+2021-01-19
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1785,7 +1817,7 @@ Steve Ped
 dge &lt;- estimateDisp(dge, design = X, robust = TRUE)
 fit &lt;- glmQLFit(dge)</code></pre>
 <pre class="r"><code>alpha &lt;- 0.05
-lambda &lt;- log2(1.2)
+lambda &lt;- log2(1.1)
 topTable &lt;- glmTreat(fit, coef = &quot;DHT&quot;, lfc = lambda) %&gt;%
   topTags(n = Inf) %&gt;%
   .[[&quot;table&quot;]] %&gt;%
@@ -1810,7 +1842,7 @@ H_0: -\lambda \leq \mu \leq \lambda \\
 \text{Vs.} \\
 H_A: |\mu| &gt; \lambda
 \]</span></p>
-<p>This characterises <span class="math inline">\(H_0\)</span> as being a range instead of being the singularity 0, with <span class="math inline">\(\mu\)</span> representing the true mean logFC. The default value of <span class="math inline">\(\lambda = \log_2 1.2 = 0.263\)</span> was chosen. This removes any requirement for <em>post hoc</em> filtering based on logFC. Using this approach, 44 genes were considered as DE to an FDR of 0.05. Of these, 42 were up-regulated with the remaining 2 being down-regulated.</p>
+<p>This characterises <span class="math inline">\(H_0\)</span> as being a range instead of being the singularity 0, with <span class="math inline">\(\mu\)</span> representing the true mean logFC. The value of <span class="math inline">\(\lambda = \log_2 1.1 = 0.138\)</span> was chosen, which is <strong>less stringent than the default value of 0.263</strong>, but still adds a degree of robustness to the results. This removes any requirement for <em>post hoc</em> filtering based on logFC. Using this approach, 59 genes were considered as DE to an FDR of 0.05. Of these, 52 were up-regulated with the remaining 7 being down-regulated.</p>
 <pre class="r"><code>topTable %&gt;%
   ggplot(aes(logCPM, logFC)) +
   geom_point(
@@ -1860,6 +1892,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/blob/2b4da75e8ca9e34dcc739dd1a5c9fd2bf9507eb8/docs/figure/dge_analysis.Rmd/plotMA-1.png" target="_blank">2b4da75</a>
+</td>
+<td>
+Steve Ped
+</td>
+<td>
+2021-01-19
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/blob/b75a8877fd98db97925829ada5842a371c3ea269/docs/figure/dge_analysis.Rmd/plotMA-1.png" target="_blank">b75a887</a>
 </td>
 <td>
@@ -1893,7 +1936,7 @@ Steve Ped
   geom_text_repel(
     aes(label = gene_name, colour = DE),
     data = . %&gt;%
-      dplyr::filter(PValue &lt; 2e-6 | (DE &amp; logFC &lt; 0)),
+      dplyr::filter(PValue &lt; 1e-6 | (DE &amp; logFC &lt; 0)),
     show.legend = FALSE
   ) +
   geom_vline(xintercept = c(-1,1), colour = &quot;blue&quot;, linetype = 2) +
@@ -1936,6 +1979,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/blob/2b4da75e8ca9e34dcc739dd1a5c9fd2bf9507eb8/docs/figure/dge_analysis.Rmd/plotVolcano-1.png" target="_blank">2b4da75</a>
+</td>
+<td>
+Steve Ped
+</td>
+<td>
+2021-01-19
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/blob/b75a8877fd98db97925829ada5842a371c3ea269/docs/figure/dge_analysis.Rmd/plotVolcano-1.png" target="_blank">b75a887</a>
 </td>
 <td>
@@ -1974,8 +2028,8 @@ Steve Ped
     columns = c(&quot;PValue&quot;, &quot;FDR&quot;),
     digits = 3
   )</code></pre>
-<div id="htmlwidget-363a75b0453247814143" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-363a75b0453247814143">{"x":{"filter":"none","caption":"<caption>All genes were considered as DE using the criteria of an FDR-adjusted p-value &lt; 0.05.<\/caption>","data":[["ENSG00000100003","ENSG00000182795","ENSG00000182352","ENSG00000156853","ENSG00000256612","ENSG00000169213","ENSG00000196208","ENSG00000145088","ENSG00000179388","ENSG00000197408","ENSG00000127663","ENSG00000152661","ENSG00000104205","ENSG00000148344","ENSG00000233622","ENSG00000005469","ENSG00000150594","ENSG00000164120","ENSG00000112297","ENSG00000156284","ENSG00000096060","ENSG00000253125","ENSG00000112541","ENSG00000151929","ENSG00000107186","ENSG00000174827","ENSG00000047346","ENSG00000159167","ENSG00000134258","ENSG00000157214","ENSG00000186868","ENSG00000169116","ENSG00000275342","ENSG00000163406","ENSG00000095321","ENSG00000269858","ENSG00000047644","ENSG00000155850","ENSG00000141753","ENSG00000170743","ENSG00000135547","ENSG00000109062","ENSG00000139211","ENSG00000066468"],["SEC14L2","C1orf116","C17orf77","ZNF689","CYP2B7P","RAB3B","GREB1","EAF2","EGR3","CYP2B6","KDM4B","GJA1","SGK3","PTGES","CYP2T1P","CROT","ADRA2A","HPGD","CRYBG1","CLDN8","FKBP5","AC055854.1","PDE10A","BAG3","MPDZ","PDZK1","FAM214A","STC1","VTCN1","STEAP2","MAPT","PARM1","PRAG1","SLC15A2","CRAT","EGLN2","WWC3","SLC26A2","IGFBP4","SYT9","HEY2","SLC9A3R1","AMIGO2","FGFR2"],[5.85,5.22,2.78,6.27,6.3,2.6,5.23,4.15,4.14,2.95,6.86,5.09,3.98,5.03,5.04,4.98,2.12,5.77,4.79,3.05,5.36,1.71,1.65,7.16,5.42,4.34,7.3,3.72,6.5,3.74,7.07,3.14,2.95,3.92,8.34,4.14,5.81,3.75,6.73,1.11,4.46,9.46,4.47,3.18],[3.34,3.28,2.96,2.36,1.9,1.94,1.67,1.26,1.94,1.8,0.89,1.3,1.43,1.98,1.43,1.05,1.39,1.05,1.04,1.27,0.81,1.27,1.53,0.81,0.8,0.95,0.71,1.04,-0.78,0.84,0.66,0.95,0.89,1.25,0.79,0.8,0.61,0.79,0.71,1.58,0.64,0.61,-0.62,0.86],[9.378439955312e-12,1.55784579000038e-10,1.92729778770983e-09,2.58520309591988e-09,6.52861160488412e-09,1.45023539310785e-08,1.58958470165724e-08,1.68436324073637e-08,8.45627554951484e-08,9.96310321820953e-08,1.7596893558861e-07,1.87170001963794e-07,1.88379972675819e-07,4.20822308795444e-07,4.40034752043794e-07,8.90319452356602e-07,1.12152878875041e-06,1.31310052485139e-06,1.72320814704668e-06,2.83021876202132e-06,3.13233306191498e-06,3.60028272981514e-06,3.72544263274925e-06,5.53936901595973e-06,5.9425770270684e-06,9.88364383452299e-06,1.04052372715623e-05,1.45073609458282e-05,1.4766541812125e-05,1.77832606548716e-05,1.82445103472789e-05,1.87960906869416e-05,1.94289342262691e-05,2.38664947483901e-05,2.48801630186253e-05,2.86637906098947e-05,4.00306081041933e-05,4.79711026265918e-05,8.5175925215818e-05,9.4159185043488e-05,9.72858598168855e-05,0.000100065182760578,0.000126654582860857,0.000141849172335406],[1.45328305547515e-07,1.20701891809229e-06,9.95513550611716e-06,1.00150767935936e-05,2.02334730858569e-05,3.26261159730636e-05,3.26261159730636e-05,3.26261159730636e-05,0.000145598273239202,0.000154388247469375,0.000224548927429576,0.000224548927429576,0.000224548927429576,0.000454585234511376,0.000454585234511376,0.000862274389607369,0.00102230647708684,0.00113043365183873,0.00140541228666502,0.00219285349681412,0.00231136348225879,0.00250997647987315,0.00250997647987315,0.00357658592797133,0.00368344694445808,0.0058906517253757,0.00597183543556036,0.00789042523864444,0.00789042523864444,0.00910200691515148,0.00910200691515148,0.00910200691515148,0.00912335650818988,0.0108775059594428,0.0110155144610462,0.012338169424748,0.016765251437367,0.0195621106921491,0.0338432342857517,0.0364772682858473,0.0367693093590843,0.0369192874299504,0.0456427771165546,0.0499566994206693],["22:30396941-30425303:+","1:207018522-207032756:-","17:74584679-74594209:+","16:30602558-30624012:-","19:40924219-40950660:+","1:51907956-51990700:-","2:11482341-11642788:+","3:121835183-121886526:+","8:22687659-22693480:-","19:40991282-41018398:+","19:4969113-5153598:+","6:121435595-121449727:+","8:66712734-66862022:+","9:129738331-129753042:-","19:40808474-40812100:-","7:87345664-87399794:+","10:111077029-111080907:+","4:174490175-174523154:-","6:106360717-106572017:+","21:30214006-30216097:-","6:35573585-35728583:-","8:22690150-22798616:+","6:165327287-165988078:-","10:119651380-119677819:+","9:13105704-13279590:-","1:145670852-145708148:-","15:52581317-52709817:-","8:23841929-23854806:-","1:117143587-117210960:-","7:90167590-90238137:+","17:45894551-46028334:+","4:74933095-75050115:+","8:8317736-8386439:-","3:121894401-121944188:+","9:129094794-129111189:-","19:40798996-40808434:+","X:10015254-10144474:+","5:149960758-149993455:+","17:40443450-40457725:+","11:7238778-7469043:+","6:125747664-125761269:+","17:74748628-74769353:+","12:47075707-47079951:-","10:121478332-121598458:-"],["protein_coding","protein_coding","lncRNA","protein_coding","transcribed_unprocessed_pseudogene","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","transcribed_unitary_pseudogene","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","lncRNA","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding"],[23541,79098,146723,115509,1556,5865,9687,55840,1960,1555,23030,2697,23678,9536,171523,54677,150,3248,202,9073,2289,null,[10846,90632],9531,8777,5174,56204,6781,79679,261729,4137,25849,157285,6565,1384,112398,55841,1836,3487,143425,23493,9368,347902,2263]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>gene_id<\/th>\n      <th>gene_name<\/th>\n      <th>logCPM<\/th>\n      <th>logFC<\/th>\n      <th>PValue<\/th>\n      <th>FDR<\/th>\n      <th>location<\/th>\n      <th>gene_biotype<\/th>\n      <th>entrezid<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\");\n  }"},{"targets":5,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3,4,5]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render"],"jsHooks":[]}</script>
+<div id="htmlwidget-ba0652dd7de0cdedd47a" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ba0652dd7de0cdedd47a">{"x":{"filter":"none","caption":"<caption>All genes were considered as DE using the criteria of an FDR-adjusted p-value &lt; 0.05.<\/caption>","data":[["ENSG00000100003","ENSG00000182795","ENSG00000182352","ENSG00000156853","ENSG00000256612","ENSG00000145088","ENSG00000169213","ENSG00000196208","ENSG00000127663","ENSG00000179388","ENSG00000197408","ENSG00000152661","ENSG00000104205","ENSG00000233622","ENSG00000148344","ENSG00000005469","ENSG00000164120","ENSG00000150594","ENSG00000112297","ENSG00000096060","ENSG00000151929","ENSG00000107186","ENSG00000156284","ENSG00000253125","ENSG00000047346","ENSG00000112541","ENSG00000186868","ENSG00000134258","ENSG00000174827","ENSG00000157214","ENSG00000159167","ENSG00000047644","ENSG00000095321","ENSG00000275342","ENSG00000169116","ENSG00000269858","ENSG00000155850","ENSG00000163406","ENSG00000109062","ENSG00000135547","ENSG00000141753","ENSG00000139211","ENSG00000123836","ENSG00000095739","ENSG00000149177","ENSG00000066468","ENSG00000115594","ENSG00000170743","ENSG00000163644","ENSG00000142396","ENSG00000183111","ENSG00000181788","ENSG00000215859","ENSG00000151892","ENSG00000197632","ENSG00000137501","ENSG00000154734","ENSG00000161638","ENSG00000131844"],["SEC14L2","C1orf116","C17orf77","ZNF689","CYP2B7P","EAF2","RAB3B","GREB1","KDM4B","EGR3","CYP2B6","GJA1","SGK3","CYP2T1P","PTGES","CROT","HPGD","ADRA2A","CRYBG1","FKBP5","BAG3","MPDZ","CLDN8","AC055854.1","FAM214A","PDE10A","MAPT","VTCN1","PDZK1","STEAP2","STC1","WWC3","CRAT","PRAG1","PARM1","EGLN2","SLC26A2","SLC15A2","SLC9A3R1","HEY2","IGFBP4","AMIGO2","PFKFB2","BAMBI","PTPRJ","FGFR2","IL1R1","SYT9","PPM1K","ERVK3-1","ARHGEF37","SIAH2","PDZK1P1","GFRA1","SERPINB2","SYTL2","ADAMTS1","ITGA5","MCCC2"],[5.85,5.22,2.78,6.27,6.3,4.15,2.6,5.23,6.86,4.14,2.95,5.09,3.98,5.04,5.03,4.98,5.77,2.12,4.79,5.36,7.16,5.42,3.05,1.71,7.3,1.65,7.07,6.5,4.34,3.74,3.72,5.81,8.34,2.95,3.14,4.14,3.75,3.92,9.46,4.46,6.73,4.47,5.76,7.58,5.43,3.18,4.55,1.11,5.79,3.39,4.75,6.46,3.79,4.53,2.13,5.04,3.94,3.82,8.49],[3.34,3.28,2.96,2.36,1.9,1.26,1.94,1.67,0.89,1.94,1.8,1.3,1.43,1.43,1.98,1.05,1.05,1.39,1.04,0.81,0.81,0.8,1.27,1.27,0.71,1.53,0.66,-0.78,0.95,0.84,1.04,0.61,0.79,0.89,0.95,0.8,0.79,1.25,0.61,0.64,0.71,-0.62,0.6,-0.5,0.59,0.86,-0.67,1.58,0.49,0.66,0.61,0.53,0.82,0.57,-1.04,-0.48,0.59,-0.78,0.41],[8.44687910679601e-12,1.39429022533128e-10,1.65646766890571e-09,2.10135108076617e-09,4.74918882009665e-09,8.27877702924061e-09,1.05057754672522e-08,1.05433430989305e-08,4.84396394592421e-08,6.26030038255517e-08,7.00179356029468e-08,9.9542209181812e-08,1.10219584730751e-07,2.62430254496463e-07,3.19818686507257e-07,3.57551289853288e-07,5.33260815456217e-07,6.48745305488606e-07,6.96476742399907e-07,7.6643151505756e-07,1.40936375479831e-06,1.46740240738753e-06,1.52503246071799e-06,1.94251244504295e-06,2.12579501278154e-06,2.41288461867054e-06,3.4722838269151e-06,3.56774337260126e-06,3.6409497757914e-06,5.2079251228381e-06,6.38424898558117e-06,6.53081556472263e-06,6.55633871760077e-06,6.59692998672726e-06,7.21006432798278e-06,7.90985483758809e-06,1.3258453558067e-05,1.3619958711557e-05,1.84270003825134e-05,2.0340296070669e-05,2.21473913209547e-05,2.53373028175926e-05,3.35545977226348e-05,3.44318448625466e-05,3.90269408030229e-05,5.18350485837649e-05,6.3894914417087e-05,6.74395492126056e-05,7.195193747593e-05,7.27911986678823e-05,7.39609064186332e-05,8.09784286307849e-05,9.24129971199571e-05,0.000133402214534356,0.000143151477941976,0.000145993262200969,0.000148276938172045,0.000159657433770233,0.000174075035467256],[1.30892838638911e-07,1.08029606658668e-06,8.14063408688813e-06,8.14063408688813e-06,1.47186859912435e-05,2.04224555826283e-05,2.04224555826283e-05,2.04224555826283e-05,8.34022947844906e-05,9.70096147280749e-05,9.8636175463933e-05,0.000128542172790113,0.000131381744999056,0.000290472801691228,0.000330394024407764,0.00034628842422291,0.000486082917429973,0.000558497625213969,0.000568031768433103,0.000593831137866597,0.00102747404396896,0.00102747404396896,0.00102747404396896,0.0012542155353494,0.00131765278072251,0.00143807923272764,0.00194552268019529,0.00194552268019529,0.00194552268019529,0.00269006692344997,0.00300664785512722,0.00300664785512722,0.00300664785512722,0.00300664785512722,0.00319220448075489,0.00340475307120181,0.00555278368475153,0.00555407579458651,0.00732166148531867,0.00787983069777717,0.00837063355876864,0.00934825820146228,0.0120921406118593,0.012126269727046,0.0134391438818587,0.0174616502794352,0.02106628922994,0.0217717344708028,0.0224725138404537,0.0224725138404537,0.0224725138404537,0.0241315717319739,0.0270194679881293,0.0382814947485997,0.0403105163844563,0.0403105163844563,0.0403105163844563,0.0426560619604056,0.0457197754169592],["22:30396941-30425303:+","1:207018522-207032756:-","17:74584679-74594209:+","16:30602558-30624012:-","19:40924219-40950660:+","3:121835183-121886526:+","1:51907956-51990700:-","2:11482341-11642788:+","19:4969113-5153598:+","8:22687659-22693480:-","19:40991282-41018398:+","6:121435595-121449727:+","8:66712734-66862022:+","19:40808474-40812100:-","9:129738331-129753042:-","7:87345664-87399794:+","4:174490175-174523154:-","10:111077029-111080907:+","6:106360717-106572017:+","6:35573585-35728583:-","10:119651380-119677819:+","9:13105704-13279590:-","21:30214006-30216097:-","8:22690150-22798616:+","15:52581317-52709817:-","6:165327287-165988078:-","17:45894551-46028334:+","1:117143587-117210960:-","1:145670852-145708148:-","7:90167590-90238137:+","8:23841929-23854806:-","X:10015254-10144474:+","9:129094794-129111189:-","8:8317736-8386439:-","4:74933095-75050115:+","19:40798996-40808434:+","5:149960758-149993455:+","3:121894401-121944188:+","17:74748628-74769353:+","6:125747664-125761269:+","17:40443450-40457725:+","12:47075707-47079951:-","1:207034366-207081024:+","10:28677510-28682932:+","11:47980558-48170841:+","10:121478332-121598458:-","2:102064544-102179874:+","11:7238778-7469043:+","4:88257620-88284769:-","19:58305319-58315663:+","5:149551947-149634968:+","3:150741125-150763477:-","1:147993862-148014956:-","10:116056925-116273467:-","18:63871692-63903888:+","11:85694224-85811159:-","21:26835755-26845409:-","12:54395261-54419266:-","5:71587288-71658706:+"],["protein_coding","protein_coding","lncRNA","protein_coding","transcribed_unprocessed_pseudogene","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","transcribed_unitary_pseudogene","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","lncRNA","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","transcribed_unprocessed_pseudogene","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding","protein_coding"],[23541,79098,146723,115509,1556,55840,5865,9687,23030,1960,1555,2697,23678,171523,9536,54677,3248,150,202,2289,9531,8777,9073,null,56204,[10846,90632],4137,79679,5174,261729,6781,55841,1384,157285,25849,112398,1836,6565,9368,23493,3487,347902,5208,25805,5795,2263,3554,143425,152926,null,389337,6478,null,2674,5055,54843,9510,3678,64087]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>gene_id<\/th>\n      <th>gene_name<\/th>\n      <th>logCPM<\/th>\n      <th>logFC<\/th>\n      <th>PValue<\/th>\n      <th>FDR<\/th>\n      <th>location<\/th>\n      <th>gene_biotype<\/th>\n      <th>entrezid<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"targets":4,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\");\n  }"},{"targets":5,"render":"function(data, type, row, meta) {\n    return type !== 'display' ? data : DTWidget.formatSignif(data, 3, 3, \",\", \".\");\n  }"},{"className":"dt-right","targets":[2,3,4,5]}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render"],"jsHooks":[]}</script>
 <div id="top-de-genes" class="section level3">
 <h3>Top DE Genes</h3>
 <p>logCPM values for the most up and down-regulated genes were also inspected using simple boxplots.</p>
@@ -2007,6 +2061,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/blob/2b4da75e8ca9e34dcc739dd1a5c9fd2bf9507eb8/docs/figure/dge_analysis.Rmd/plotTopUp-1.png" target="_blank">2b4da75</a>
+</td>
+<td>
+Steve Ped
+</td>
+<td>
+2021-01-19
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/blob/b75a8877fd98db97925829ada5842a371c3ea269/docs/figure/dge_analysis.Rmd/plotTopUp-1.png" target="_blank">b75a887</a>
@@ -2061,6 +2126,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/blob/2b4da75e8ca9e34dcc739dd1a5c9fd2bf9507eb8/docs/figure/dge_analysis.Rmd/plotTopDown-1.png" target="_blank">2b4da75</a>
+</td>
+<td>
+Steve Ped
+</td>
+<td>
+2021-01-19
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/DRMCRL/ZR75_DHT-RNASeq/blob/b75a8877fd98db97925829ada5842a371c3ea269/docs/figure/dge_analysis.Rmd/plotTopDown-1.png" target="_blank">b75a887</a>
@@ -2260,27 +2336,27 @@ attached base packages:
  [8] datasets  methods   base     
 
 other attached packages:
- [1] DT_0.17                 ggrepel_0.9.0           cqn_1.36.0             
- [4] quantreg_5.82           SparseM_1.78            preprocessCore_1.52.1  
+ [1] DT_0.17                 ggrepel_0.9.1           cqn_1.36.0             
+ [4] quantreg_5.83           SparseM_1.78            preprocessCore_1.52.1  
  [7] nor1mix_1.3-0           mclust_5.4.7            magrittr_2.0.1         
 [10] ggfortify_0.4.11        cowplot_1.1.1           ensembldb_2.14.0       
 [13] AnnotationFilter_1.14.0 GenomicFeatures_1.42.1  AnnotationDbi_1.52.0   
 [16] Biobase_2.50.0          GenomicRanges_1.42.0    GenomeInfoDb_1.26.2    
 [19] IRanges_2.24.1          S4Vectors_0.28.1        AnnotationHub_2.22.0   
 [22] BiocFileCache_1.14.0    dbplyr_2.0.0            BiocGenerics_0.36.0    
-[25] edgeR_3.32.0            limma_3.46.0            glue_1.4.2             
+[25] edgeR_3.32.1            limma_3.46.0            glue_1.4.2             
 [28] pander_0.6.3            scales_1.1.1            yaml_2.2.1             
-[31] forcats_0.5.0           stringr_1.4.0           dplyr_1.0.2            
+[31] forcats_0.5.0           stringr_1.4.0           dplyr_1.0.3            
 [34] purrr_0.3.4             readr_1.4.0             tidyr_1.1.2            
-[37] tibble_3.0.4            ggplot2_3.3.3           tidyverse_1.3.0        
+[37] tibble_3.0.5            ggplot2_3.3.3           tidyverse_1.3.0        
 [40] workflowr_1.6.2        
 
 loaded via a namespace (and not attached):
   [1] readxl_1.3.1                  backports_1.2.1              
   [3] plyr_1.8.6                    lazyeval_0.2.2               
-  [5] crosstalk_1.1.0.1             BiocParallel_1.24.1          
-  [7] digest_0.6.27                 htmltools_0.5.0              
-  [9] fansi_0.4.1                   memoise_1.1.0                
+  [5] crosstalk_1.1.1               BiocParallel_1.24.1          
+  [7] digest_0.6.27                 htmltools_0.5.1              
+  [9] fansi_0.4.2                   memoise_1.1.0                
  [11] cluster_2.1.0                 Biostrings_2.58.0            
  [13] modelr_0.1.8                  matrixStats_0.57.0           
  [15] askpass_1.1                   prettyunits_1.1.1            
@@ -2292,13 +2368,13 @@ loaded via a namespace (and not attached):
  [27] zoo_1.8-8                     gtable_0.3.0                 
  [29] zlibbioc_1.36.0               XVector_0.30.0               
  [31] MatrixModels_0.4-1            DelayedArray_0.16.0          
- [33] DBI_1.1.0                     Rcpp_1.0.5                   
+ [33] DBI_1.1.1                     Rcpp_1.0.6                   
  [35] viridisLite_0.3.0             xtable_1.8-4                 
  [37] progress_1.2.2                flashClust_1.01-2            
  [39] bit_4.0.4                     htmlwidgets_1.5.3            
  [41] httr_1.4.2                    RColorBrewer_1.1-2           
- [43] ellipsis_0.3.1                pkgconfig_2.0.3              
- [45] XML_3.99-0.5                  farver_2.0.3                 
+ [43] ellipsis_0.3.1                farver_2.0.3                 
+ [45] pkgconfig_2.0.3               XML_3.99-0.5                 
  [47] locfit_1.5-9.4                here_1.0.1                   
  [49] reshape2_1.4.4                tidyselect_1.1.0             
  [51] labeling_0.4.2                rlang_0.4.10                 
@@ -2322,17 +2398,17 @@ loaded via a namespace (and not attached):
  [87] vctrs_0.3.6                   pillar_1.4.7                 
  [89] lifecycle_0.2.0               BiocManager_1.30.10          
  [91] data.table_1.13.6             bitops_1.0-6                 
- [93] conquer_1.0.2                 httpuv_1.5.4                 
+ [93] conquer_1.0.2                 httpuv_1.5.5                 
  [95] rtracklayer_1.50.0            latticeExtra_0.6-29          
  [97] hwriter_1.3.2                 R6_2.5.0                     
  [99] ShortRead_1.48.0              promises_1.1.1               
 [101] gridExtra_2.3                 MASS_7.3-53                  
 [103] ngsReports_1.6.1              assertthat_0.2.1             
 [105] SummarizedExperiment_1.20.0   openssl_1.4.3                
-[107] rprojroot_2.0.2               withr_2.3.0                  
+[107] rprojroot_2.0.2               withr_2.4.0                  
 [109] GenomicAlignments_1.26.0      Rsamtools_2.6.0              
 [111] GenomeInfoDbData_1.2.4        mgcv_1.8-33                  
-[113] hms_0.5.3                     grid_4.0.3                   
+[113] hms_1.0.0                     grid_4.0.3                   
 [115] rmarkdown_2.6                 MatrixGenerics_1.2.0         
 [117] git2r_0.28.0                  scatterplot3d_0.3-41         
 [119] shiny_1.5.0                   lubridate_1.7.9.2            
@@ -2353,6 +2429,8 @@ footer is added to webpages before the MathJax javascript. -->
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
+
+
 
 
 </div>
