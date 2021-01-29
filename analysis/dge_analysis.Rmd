@@ -745,7 +745,7 @@ logCPM %>%
   scale_fill_manual(values = treat_cols)
 ```
 
-```{r plotTopDown, fig.height=4, fig.width=6, echo=FALSE, fig.cap = "*Top ranked down-regulated genes*"}
+```{r plotTopDown, fig.height=8, fig.width=6, echo=FALSE, fig.cap = "*Top ranked down-regulated genes*"}
 logCPM %>%
   .[head(down, 12),] %>%
   as.data.frame() %>%
